@@ -14,13 +14,15 @@ public class Piece {
 	
 	protected Vector<Pair> moves;
 	
+	protected Game.OWNER owner;
 	protected boolean alive;
 	
-	public Piece(int x, int y){
+	public Piece(int x, int y, Game.OWNER owner){
 		this.xPos = x;
 		this.yPos = y;
 		this.width = Game.map.getTileWidth();
 		this.height = Game.map.getTileHeight();
+		this.owner = owner;
 		this.alive = true;
 		this.moves = new Vector<Pair>();
 	}
@@ -40,6 +42,11 @@ public class Piece {
 	}
 	
 	public void moveTo(int x, int y){
+		//Update map
+		Game.map.setTileOwner(this.xPos, this.yPos, Game.OWNER.NONE);
+		Game.map.setTileOwner(x,y,owner);
+		
+		//Move
 		this.xPos = x;
 		this.yPos = y;
 	}

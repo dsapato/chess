@@ -17,6 +17,8 @@ public class Game {
 	public static STATE state;
 	public static OWNER turn;
 	
+	private boolean mouseReleased;
+	
 	//Constructor
 	Game(){
 		map = new Map();
@@ -24,6 +26,8 @@ public class Game {
 		playerTwo = new Player(OWNER.PLAYER_TWO);
 		state = STATE.SELECTING;
 		turn = OWNER.PLAYER_ONE;
+		mouseReleased = false;
+	
 	}
 	
 	//Game loop, updates and draws everything until closing
@@ -58,8 +62,12 @@ public class Game {
 	}
 	
 	private void checkMouse(){
-		
-		if(Zen.getMouseState() == MouseEvent.MOUSE_PRESSED){
+		//Use release trick to avoid holding down counting as multiple clicks
+		if(Zen.getMouseState() == MouseEvent.MOUSE_RELEASED || Zen.getMouseState() == MouseEvent.MOUSE_CLICKED){
+			mouseReleased = true;
+		}
+		if(mouseReleased && Zen.getMouseState() == MouseEvent.MOUSE_PRESSED){
+			mouseReleased = false;
 			int mouseX = Zen.getMouseX();
 			int mouseY = 640 - Zen.getMouseY();
 			
@@ -77,5 +85,4 @@ public class Game {
 			playerTwo.select(boardX, boardY);
 		}
 	}
-
 }

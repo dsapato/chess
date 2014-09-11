@@ -9,12 +9,12 @@ import javax.imageio.ImageIO;
 public class Knight extends Piece {
 
 	//Constructor
-	public Knight(int x, int y, Game.OWNER playerNum){
-		super(x,y);
+	public Knight(int x, int y, Game.OWNER owner){
+		super(x,y, owner);
 		
 		img = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
 		try {
-			if(playerNum == Game.OWNER.PLAYER_ONE)
+			if(owner == Game.OWNER.PLAYER_ONE)
 				img = ImageIO.read(new File("resources/knightWhite.png"));
 			else{
 				img = ImageIO.read(new File("resources/knightBlack.png"));

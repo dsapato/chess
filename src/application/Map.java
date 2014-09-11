@@ -1,6 +1,11 @@
 package application;
 
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.Vector;
+
+import javax.imageio.ImageIO;
 
 public class Map {
 	private final int SIZE = 8;
@@ -8,10 +13,16 @@ public class Map {
 	private int TILESIZE = Zen.getZenWidth()/SIZE; 
 	
 	private MapTile[][] mapTiles;
+
 	
 	//Constructor
 	public Map(){
 		mapTiles = new MapTile[SIZE][SIZE];
+		for(int x = 0; x < SIZE; x++){
+			for(int y = 0; y < SIZE; y++){
+				mapTiles[x][y] = new MapTile();
+			}
+		}
 	}
 	
 	public void update(){
@@ -22,7 +33,7 @@ public class Map {
 		for(int x = 0; x < SIZE; x++){
 			for(int y = 0; y < SIZE; y++){
 				if((x+y) % 2 == 1){//Switch on odd/even
-					Zen.setColor(128, 128, 128);//Gray
+					Zen.setColor(150, 150, 150);//Gray
 					Zen.fillRect(x*TILESIZE, y*TILESIZE, TILESIZE, TILESIZE);
 				}
 				else{
@@ -118,5 +129,11 @@ public class Map {
 	
 	public int getTileHeight(){
 		return TILESIZE;
+	}
+	
+	public void setTileOwner(int x, int y, Game.OWNER owner){
+		if(x > 0 && y > 0 && x < SIZE && y < SIZE){
+			mapTiles[x][y].owner = owner;
+		}
 	}
 }
