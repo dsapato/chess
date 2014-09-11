@@ -1,0 +1,114 @@
+package application;
+
+import java.util.Vector;
+
+public class Map {
+	private final int SIZE = 8;
+	
+	private int TILESIZE = Zen.getZenWidth()/SIZE; 
+	
+	private MapTile[][] mapTiles;
+	
+	//Constructor
+	public Map(){
+		mapTiles = new MapTile[SIZE][SIZE];
+	}
+	
+	public void update(){
+		
+	}
+	
+	public void draw(){
+		for(int x = 0; x < SIZE; x++){
+			for(int y = 0; y < SIZE; y++){
+				if((x+y) % 2 == 0){//Switch on odd/even
+					Zen.setColor(255, 255, 255);//White
+					Zen.fillRect(x*TILESIZE, y*TILESIZE, TILESIZE, TILESIZE);
+				}
+				else{
+					Zen.setColor(0, 0, 0);//Black
+					Zen.fillRect(x*TILESIZE, y*TILESIZE, TILESIZE, TILESIZE);
+				}
+			}
+		}
+	}
+	
+	//Return Vector of the positions of tiles in that row
+	public Vector<Pair> getRowPositionsAt(int y){
+		Vector<Pair> ret = new Vector<Pair>();
+		//Square from 0 to SIZE-1
+		for(int i = 0; i < SIZE; i++){
+			ret.add(new Pair(i,y));
+		}
+		return ret;
+	}
+	
+	//Return Vector of the positions of tiles in that column
+	public Vector<Pair> getColumnPositionsAt(int x){
+		Vector<Pair> ret = new Vector<Pair>();
+		//Square from 0 to SIZE-1
+		for(int i = 0; i < SIZE; i++){
+			ret.add(new Pair(x,i));
+		}
+		return ret;
+	}
+	
+	//Return Vector of the positions of tiles in that diagonal, bottom left to top right
+	public Vector<Pair> getDiagonalBLtoTR(int x, int y){
+		Vector<Pair> ret = new Vector<Pair>();
+		
+		//Get all upwards and to the right
+		int currX = x;
+		int currY = y;
+		while(currX < SIZE && currY < SIZE){
+			currX++;
+			currY++;
+			ret.add(new Pair(currX, currY));
+		}
+		
+		//Get all below and to the left
+		currX = x;
+		currY = y;
+		while(currX > 0 && currY > 0){
+			currX--;
+			currY--;
+			ret.add(new Pair(currX, currY));
+		}
+		
+		return ret;
+	}
+	
+	//Return Vector of the positions of tiles in that diagonal, top left to bottom right
+	public Vector<Pair> getDiagonalTLtoBR(int x, int y){
+		Vector<Pair> ret = new Vector<Pair>();
+		
+		//Get all upwards and to the left
+		int currX = x;
+		int currY = y;
+		while(currX > 0 && currY < SIZE){
+			currX--;
+			currY++;
+			ret.add(new Pair(currX, currY));
+		}
+		
+		//Get all below and to the right
+		currX = x;
+		currY = y;
+		while(currX < SIZE && currY > 0){
+			currX++;
+			currY--;
+			ret.add(new Pair(currX, currY));
+		}
+		
+		return ret;
+	}
+	
+	/****Getters and Setters****/
+	public int getWidth(){
+		return SIZE;
+	}
+	
+	public int getHeight(){
+		return SIZE;
+	}
+}
