@@ -1,10 +1,28 @@
 package application;
 
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+
 public class Bishop extends Piece {
 
 	//Constructor
-	public Bishop(int x, int y){
+	public Bishop(int x, int y, Game.OWNER playerNum){
 		super(x,y);
+		
+		img = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+		try {
+			if(playerNum == Game.OWNER.PLAYER_ONE)
+				img = ImageIO.read(new File("resources/bishopWhite.png"));
+			else{
+				img = ImageIO.read(new File("resources/bishopBlack.png"));
+			}
+		}
+		catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	//When selected, get all possible moves

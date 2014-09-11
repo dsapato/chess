@@ -15,18 +15,18 @@ public class Map {
 	}
 	
 	public void update(){
-		
+
 	}
 	
 	public void draw(){
 		for(int x = 0; x < SIZE; x++){
 			for(int y = 0; y < SIZE; y++){
-				if((x+y) % 2 == 0){//Switch on odd/even
-					Zen.setColor(255, 255, 255);//White
+				if((x+y) % 2 == 1){//Switch on odd/even
+					Zen.setColor(128, 128, 128);//Gray
 					Zen.fillRect(x*TILESIZE, y*TILESIZE, TILESIZE, TILESIZE);
 				}
 				else{
-					Zen.setColor(0, 0, 0);//Black
+					Zen.setColor(255, 255, 255);//White
 					Zen.fillRect(x*TILESIZE, y*TILESIZE, TILESIZE, TILESIZE);
 				}
 			}
@@ -110,5 +110,13 @@ public class Map {
 	
 	public int getHeight(){
 		return SIZE;
+	}
+	
+	public int getTileWidth(){
+		return TILESIZE;
+	}
+	
+	public int getTileHeight(){
+		return TILESIZE;
 	}
 }
