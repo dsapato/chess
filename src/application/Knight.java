@@ -41,6 +41,8 @@ public class Knight extends Piece {
 		
 		moves.add(new Pair(xPos-2, yPos-1));
 		moves.add(new Pair(xPos-1, yPos-2));
+		
+		checkMoves();
 	}
 	
 }

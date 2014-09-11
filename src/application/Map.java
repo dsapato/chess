@@ -1,11 +1,7 @@
 package application;
 
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 import java.util.Vector;
 
-import javax.imageio.ImageIO;
 
 public class Map {
 	private final int SIZE = 8;
@@ -45,35 +41,71 @@ public class Map {
 	}
 	
 	//Return Vector of the positions of tiles in that row
-	public Vector<Pair> getRowPositionsAt(int y){
+	public Vector<Pair> getRowPositionsAt(int x, int y, Game.OWNER owner){
 		Vector<Pair> ret = new Vector<Pair>();
 		//Square from 0 to SIZE-1
-		for(int i = 0; i < SIZE; i++){
+		for(int i = x-1; i >= 0; i--){
+			if(checkTileOccupied(i,y)){//Occupied, stop
+				if(mapTiles[i][y].owner != owner){//Enemy piece, include and stop
+					ret.add(new Pair(i,y));
+				}
+				break;
+			}
+			ret.add(new Pair(i,y));
+		}
+		for(int i = x+1; i < SIZE; i++){
+			if(checkTileOccupied(i,y)){//Occupied, stop
+				if(mapTiles[i][y].owner != owner){//Enemy piece, include and stop
+					ret.add(new Pair(i,y));
+				}
+				break;
+			}
 			ret.add(new Pair(i,y));
 		}
 		return ret;
 	}
 	
 	//Return Vector of the positions of tiles in that column
-	public Vector<Pair> getColumnPositionsAt(int x){
+	public Vector<Pair> getColumnPositionsAt(int x, int y, Game.OWNER owner){
 		Vector<Pair> ret = new Vector<Pair>();
 		//Square from 0 to SIZE-1
-		for(int i = 0; i < SIZE; i++){
+		for(int i = y-1; i >= 0; i--){
+			if(checkTileOccupied(x,i)){//Occupied, stop
+				if(mapTiles[x][i].owner != owner){//Enemy piece, include and stop
+					ret.add(new Pair(x,i));
+				}
+				break;
+			}
+			ret.add(new Pair(x,i));
+		}
+		for(int i = y+1; i < SIZE; i++){
+			if(checkTileOccupied(x,i)){//Occupied, stop
+				if(mapTiles[x][i].owner != owner){//Enemy piece, include and stop
+					ret.add(new Pair(x,i));
+				}
+				break;
+			}
 			ret.add(new Pair(x,i));
 		}
 		return ret;
 	}
 	
 	//Return Vector of the positions of tiles in that diagonal, bottom left to top right
-	public Vector<Pair> getDiagonalBLtoTR(int x, int y){
+	public Vector<Pair> getDiagonalBLtoTR(int x, int y, Game.OWNER owner){
 		Vector<Pair> ret = new Vector<Pair>();
 		
 		//Get all upwards and to the right
 		int currX = x;
 		int currY = y;
-		while(currX < SIZE && currY < SIZE){
+		while(currX < SIZE-1 && currY < SIZE-1){
 			currX++;
 			currY++;
+			if(checkTileOccupied(currX,currY)){//Occupied, stop
+				if(mapTiles[currX][currY].owner != owner){//Enemy piece, include and stop
+					ret.add(new Pair(currX,currY));
+				}
+				break;
+			}
 			ret.add(new Pair(currX, currY));
 		}
 		
@@ -83,6 +115,12 @@ public class Map {
 		while(currX > 0 && currY > 0){
 			currX--;
 			currY--;
+			if(checkTileOccupied(currX,currY)){//Occupied, stop
+				if(mapTiles[currX][currY].owner != owner){//Enemy piece, include and stop
+					ret.add(new Pair(currX,currY));
+				}
+				break;
+			}
 			ret.add(new Pair(currX, currY));
 		}
 		
@@ -90,31 +128,58 @@ public class Map {
 	}
 	
 	//Return Vector of the positions of tiles in that diagonal, top left to bottom right
-	public Vector<Pair> getDiagonalTLtoBR(int x, int y){
+	public Vector<Pair> getDiagonalTLtoBR(int x, int y, Game.OWNER owner){
 		Vector<Pair> ret = new Vector<Pair>();
 		
 		//Get all upwards and to the left
 		int currX = x;
 		int currY = y;
-		while(currX > 0 && currY < SIZE){
+		while(currX > 0 && currY < SIZE-1){
 			currX--;
 			currY++;
+			if(checkTileOccupied(currX,currY)){//Occupied, stop
+				if(mapTiles[currX][currY].owner != owner){//Enemy piece, include and stop
+					ret.add(new Pair(currX,currY));
+				}
+				break;
+			}
 			ret.add(new Pair(currX, currY));
 		}
 		
 		//Get all below and to the right
 		currX = x;
 		currY = y;
-		while(currX < SIZE && currY > 0){
+		while(currX < SIZE-1 && currY > 0){
 			currX++;
 			currY--;
+			if(checkTileOccupied(currX,currY)){//Occupied, stop
+				if(mapTiles[currX][currY].owner != owner){//Enemy piece, include and stop
+					ret.add(new Pair(currX,currY));
+				}
+				break;
+			}
 			ret.add(new Pair(currX, currY));
 		}
 		
 		return ret;
 	}
 	
-	/****Getters and Setters****/
+	public boolean inBounds(int x, int y){
+		return x >= 0 && y >= 0 && x < SIZE && y < SIZE;
+	}
+	
+	public boolean checkTileOccupied(int x, int y){
+		if(mapTiles[x][y].owner == Game.OWNER.NONE){//Open tile, not occupied
+			return false;
+		}
+		return true;
+	}
+	
+	public boolean checkTileEnemy(int x, int y, Game.OWNER owner){
+		return mapTiles[x][y].owner != Game.OWNER.NONE && mapTiles[x][y].owner != owner;
+	}
+	
+	
 	public int getWidth(){
 		return SIZE;
 	}
@@ -132,7 +197,16 @@ public class Map {
 	}
 	
 	public void setTileOwner(int x, int y, Game.OWNER owner){
-		if(x > 0 && y > 0 && x < SIZE && y < SIZE){
+		if(x >= 0 && y >= 0 && x < SIZE && y < SIZE){
+			//Check for killing other piece
+			if(mapTiles[x][y].owner == Game.OWNER.PLAYER_ONE){
+				Game.playerOne.killAt(x,y);
+			}
+			else if(mapTiles[x][y].owner == Game.OWNER.PLAYER_TWO){
+				Game.playerTwo.killAt(x,y);
+			}
+			
+			//Adjust ownership of tile
 			mapTiles[x][y].owner = owner;
 		}
 	}

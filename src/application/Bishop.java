@@ -30,10 +30,10 @@ public class Bishop extends Piece {
 		moves.clear();
 		
 		//Get all of the squares in the diagonal bottom left to top right
-		moves.addAll(Game.map.getDiagonalBLtoTR(xPos, yPos));
+		moves.addAll(Game.map.getDiagonalBLtoTR(xPos, yPos, owner));
 		
 		//Get all of the squares in the other diagonal
-		moves.addAll(Game.map.getDiagonalTLtoBR(xPos, yPos));
+		moves.addAll(Game.map.getDiagonalTLtoBR(xPos, yPos, owner));
 	}
 	
 	

@@ -47,8 +47,10 @@ public class Game {
 	//Draw, calls appropriate draw function of all objects
 	private void draw(){
 		map.draw();
-		playerOne.draw();
-		playerTwo.draw();
+		playerOne.drawMoves();
+		playerTwo.drawMoves();
+		playerOne.drawPieces();
+		playerTwo.drawPieces();
 		
 		Zen.flipBuffer();
 	}

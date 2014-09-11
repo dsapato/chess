@@ -31,10 +31,10 @@ public class Rook extends Piece {
 		moves.clear();
 		
 		//Get all of the squares in this row
-		moves.addAll(Game.map.getRowPositionsAt(yPos));
+		moves.addAll(Game.map.getRowPositionsAt(xPos, yPos, owner));
 		
 		//Get all of the squares in this column
-		moves.addAll(Game.map.getColumnPositionsAt(xPos));
+		moves.addAll(Game.map.getColumnPositionsAt(xPos, yPos, owner));
 	}
 	
 }

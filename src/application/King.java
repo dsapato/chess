@@ -38,6 +38,8 @@ public class King extends Piece {
 		moves.add(new Pair(xPos  , yPos+1));
 		moves.add(new Pair(xPos-1, yPos+1));
 		moves.add(new Pair(xPos-1, yPos  ));
+		
+		checkMoves();
 	}	
 	
 }

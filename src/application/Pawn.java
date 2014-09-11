@@ -7,14 +7,10 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 public class Pawn extends Piece {
-	
-	private boolean firstMove;
-	private Game.OWNER player;
 
 	//Constructor
 	public Pawn(int x, int y, Game.OWNER owner){
 		super(x,y, owner);
-		firstMove = true;
 		
 		img = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
 		try {
@@ -36,20 +32,38 @@ public class Pawn extends Piece {
 		//If first turn, move two squares
 		if(firstMove){
 			if(owner == Game.OWNER.PLAYER_ONE){
-				moves.add(new Pair(xPos, yPos + 2));
+				if(!Game.map.checkTileEnemy(xPos, yPos + 2, owner))//Can't move forward if enemy there
+					moves.add(new Pair     (xPos, yPos + 2));
 			}
 			else if(owner == Game.OWNER.PLAYER_TWO){
-				moves.add(new Pair(xPos, yPos - 2));
+				if(!Game.map.checkTileEnemy(xPos, yPos - 2, owner))//Can't move forward if enemy there
+					moves.add(new Pair     (xPos, yPos - 2));
 			}
 		}
 		
 		//Normal move forward
 		if(owner == Game.OWNER.PLAYER_ONE){
-			moves.add(new Pair(xPos, yPos + 1));
+			if(!Game.map.checkTileEnemy(xPos    , yPos + 1, owner))//Can't move forward if enemy there
+				moves.add(new Pair     (xPos    , yPos + 1));
+			if(Game.map.checkTileEnemy (xPos - 1, yPos + 1, owner))//Check diagonals for enemies
+				moves.add(new Pair     (xPos - 1, yPos + 1));
+			if(Game.map.checkTileEnemy (xPos + 1, yPos + 1, owner))//Check diagonals for enemies
+				moves.add(new Pair     (xPos + 1, yPos + 1));
 		}
 		else if(owner == Game.OWNER.PLAYER_TWO){
-			moves.add(new Pair(xPos, yPos - 1));
-		}		
+			if(!Game.map.checkTileEnemy(xPos, yPos, owner))//Can't move forward if enemy there
+				if(!Game.map.checkTileEnemy(xPos    , yPos - 1, owner))//Can't move forward if enemy there
+					moves.add(new Pair     (xPos    , yPos - 1));
+				if(Game.map.checkTileEnemy (xPos - 1, yPos - 1, owner))//Check diagonals for enemies
+					moves.add(new Pair     (xPos - 1, yPos - 1));
+				if(Game.map.checkTileEnemy (xPos + 1, yPos - 1, owner))//Check diagonals for enemies
+					moves.add(new Pair     (xPos + 1, yPos - 1));
+		}
+		
+		//Check diagonals for enemies
+		
+		
+		checkMoves();
 	}	
 	
 }

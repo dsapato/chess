@@ -15,7 +15,7 @@ public class Player {
 	private Game.OWNER playerNumber;
 	
 	public Vector<Piece> pieces;
-	public int selectedPieceIndex;
+	private int selectedPieceIndex;
 	
 	//To highlight tiles
 	private BufferedImage highlightImage;
@@ -42,8 +42,8 @@ public class Player {
 		}		
 	}
 	
-	//Draw pieces
-	public void draw(){
+	//Draw possible moves
+	public void drawMoves(){
 		if(Game.turn == playerNumber && Game.state == STATE.MOVING){
 			Piece selected = pieces.get(selectedPieceIndex);
 			int sizeMoves = selected.moves.size();
@@ -52,7 +52,10 @@ public class Player {
 			}
 			
 		}
-		
+	}
+	
+	//Draw pieces
+	public void drawPieces(){
 		int size = pieces.size();
 		for(int i = 0; i < size; i++){
 			pieces.elementAt(i).draw();
@@ -127,5 +130,13 @@ public class Player {
 			}
 			Game.state = STATE.SELECTING;
 		}
-	}	
+	}
+	
+	public void killAt(int x, int y){
+		for(int i = 0; i < pieces.size(); i++){
+			if(pieces.get(i).getX() == x && pieces.get(i).getY() == y){
+				pieces.remove(i);
+			}
+		}
+	}
 }
