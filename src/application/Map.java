@@ -4,9 +4,12 @@ import java.util.Vector;
 
 
 public class Map {
-	private final int SIZE = 8;
+	private final int SIZE = 12;
 	
 	private int TILESIZE = Zen.getZenWidth()/SIZE; 
+	
+	//Draw offset fixes a gap being drawn if the screen size isn't a multiple of SIZE
+	private int drawOffset = Zen.getZenWidth() -  (Zen.getZenWidth()/SIZE*SIZE);
 	
 	private MapTile[][] mapTiles;
 
@@ -30,11 +33,11 @@ public class Map {
 			for(int y = 0; y < SIZE; y++){
 				if((x+y) % 2 == 1){//Switch on odd/even
 					Zen.setColor(150, 150, 150);//Gray
-					Zen.fillRect(x*TILESIZE, y*TILESIZE, TILESIZE, TILESIZE);
+					Zen.fillRect(x*TILESIZE, y*TILESIZE + drawOffset, TILESIZE, TILESIZE);
 				}
 				else{
 					Zen.setColor(255, 255, 255);//White
-					Zen.fillRect(x*TILESIZE, y*TILESIZE, TILESIZE, TILESIZE);
+					Zen.fillRect(x*TILESIZE, y*TILESIZE + drawOffset, TILESIZE, TILESIZE);
 				}
 			}
 		}

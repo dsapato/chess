@@ -70,30 +70,40 @@ public class Player {
 				pieces.add(new Pawn(i, 1, playerNumber));
 			}
 			
-			pieces.add(new Rook  (0,0, playerNumber));
-			pieces.add(new Rook  (7,0, playerNumber));
-			pieces.add(new Knight(1,0, playerNumber));
-			pieces.add(new Knight(6,0, playerNumber));
-			pieces.add(new Bishop(2,0, playerNumber));
-			pieces.add(new Bishop(5,0, playerNumber));
-			pieces.add(new Queen (3,0, playerNumber));
-			pieces.add(new King  (4,0, playerNumber));	
+			pieces.add(new Rook  (2,0, playerNumber));
+			pieces.add(new Rook  (9,0, playerNumber));
+			pieces.add(new Knight(3,0, playerNumber));
+			pieces.add(new Knight(8,0, playerNumber));
+			pieces.add(new Bishop(4,0, playerNumber));
+			pieces.add(new Bishop(7,0, playerNumber));
+			pieces.add(new Queen (5,0, playerNumber));
+			pieces.add(new King  (6,0, playerNumber));
+			pieces.add(new Archbishop(1,  0, playerNumber));
+			pieces.add(new Archbishop(10, 0, playerNumber));
+			pieces.add(new Chancellor(0,  0, playerNumber));
+			pieces.add(new Chancellor(11, 0, playerNumber));
 		}
 		
 		//Player Two, top of board, pawns in row 6, rest row 7.
 		else if(playerNumber == Game.OWNER.PLAYER_TWO){
+			
 			for(int i = 0; i < Game.map.getWidth(); i++){
-				pieces.add(new Pawn(i, 6, playerNumber));
+				pieces.add(new Pawn(i, Game.map.getHeight()-2, playerNumber));
 			}
 			
-			pieces.add(new Rook  (0,7, playerNumber));
-			pieces.add(new Rook  (7,7, playerNumber));
-			pieces.add(new Knight(1,7, playerNumber));
-			pieces.add(new Knight(6,7, playerNumber));
-			pieces.add(new Bishop(2,7, playerNumber));
-			pieces.add(new Bishop(5,7, playerNumber));
-			pieces.add(new Queen (3,7, playerNumber));
-			pieces.add(new King  (4,7, playerNumber));	
+			int yPlacement = Game.map.getHeight()-1;
+			pieces.add(new Rook  (2, yPlacement, playerNumber));
+			pieces.add(new Rook  (9, yPlacement, playerNumber));
+			pieces.add(new Knight(3, yPlacement, playerNumber));
+			pieces.add(new Knight(8, yPlacement, playerNumber));
+			pieces.add(new Bishop(4, yPlacement, playerNumber));
+			pieces.add(new Bishop(7, yPlacement, playerNumber));
+			pieces.add(new Queen (5, yPlacement, playerNumber));
+			pieces.add(new King  (6, yPlacement, playerNumber));
+			pieces.add(new Archbishop(1,  yPlacement, playerNumber));
+			pieces.add(new Archbishop(10, yPlacement, playerNumber));
+			pieces.add(new Chancellor(0,  yPlacement, playerNumber));
+			pieces.add(new Chancellor(11, yPlacement, playerNumber));
 		}	
 	}
 	
