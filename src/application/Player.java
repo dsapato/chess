@@ -124,7 +124,22 @@ public class Player {
 			pieces.add(new Archbishop(10, yPlacement, playerNumber));
 			pieces.add(new Chancellor(0,  yPlacement, playerNumber));
 			pieces.add(new Chancellor(11, yPlacement, playerNumber));
-		}	
+		}
+		
+		//Make sure the pieces are on the board
+		checkPieces();
+	}
+	
+	/**
+	 * Make sure that Pieces are on the board, if not, remove them
+	 */
+	private void checkPieces(){
+		for(int i = 0; i < pieces.size(); i++){
+			if(!Game.map.inBounds(pieces.get(i).getX(), pieces.get(i).getX())){//If out of bounds, remove
+				pieces.remove(i);
+				i--;//All further pieces will be shifted left by remove(), so check this i again
+			}
+		}
 	}
 	
 	/**
@@ -175,6 +190,7 @@ public class Player {
 		for(int i = 0; i < pieces.size(); i++){
 			if(pieces.get(i).getX() == x && pieces.get(i).getY() == y){
 				pieces.remove(i);
+				return;
 			}
 		}
 	}

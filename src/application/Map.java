@@ -225,7 +225,7 @@ public class Map {
 	 * @return true if tile has enemy Piece, false otherwise
 	 */
 	public boolean checkTileEnemy(int x, int y, Game.OWNER owner){
-		return mapTiles[x][y].owner != Game.OWNER.NONE && mapTiles[x][y].owner != owner;
+		return inBounds(x, y) && mapTiles[x][y].owner != Game.OWNER.NONE && mapTiles[x][y].owner != owner;
 	}
 	
 	/**
