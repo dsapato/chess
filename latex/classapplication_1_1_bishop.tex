@@ -1,6 +1,11 @@
 \hypertarget{classapplication_1_1_bishop}{\section{application.\+Bishop Class Reference}
 \label{classapplication_1_1_bishop}\index{application.\+Bishop@{application.\+Bishop}}
 }
+
+
+A \hyperlink{classapplication_1_1_piece}{Piece} object, moves along diagonals.  
+
+
 Inheritance diagram for application.\+Bishop\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,13 +15,40 @@ Inheritance diagram for application.\+Bishop\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classapplication_1_1_bishop_a824e813916e5f1457225e6374c5a102b}{{\bfseries Bishop} (int x, int y, Game.\+O\+W\+N\+E\+R owner)}\label{classapplication_1_1_bishop_a824e813916e5f1457225e6374c5a102b}
+\hyperlink{classapplication_1_1_bishop_a824e813916e5f1457225e6374c5a102b}{Bishop} (int x, int y, Game.\+O\+W\+N\+E\+R \hyperlink{classapplication_1_1_piece_a724f116bd99a66a6f6bcc8b7b35de131}{owner})
+\begin{DoxyCompactList}\small\item\em Only constructor, simply sets internals to parameters and gathers some data from the \hyperlink{classapplication_1_1_map}{Map}. \end{DoxyCompactList}\item 
+\hypertarget{classapplication_1_1_bishop_a2b4021dea2118daf0647a19b610d83d9}{void \hyperlink{classapplication_1_1_bishop_a2b4021dea2118daf0647a19b610d83d9}{get\+Moves} ()}\label{classapplication_1_1_bishop_a2b4021dea2118daf0647a19b610d83d9}
 
-\item 
-\hypertarget{classapplication_1_1_bishop_a2b4021dea2118daf0647a19b610d83d9}{void {\bfseries get\+Moves} ()}\label{classapplication_1_1_bishop_a2b4021dea2118daf0647a19b610d83d9}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets all available moves from the \hyperlink{classapplication_1_1_map}{Map} and stores them internally. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A \hyperlink{classapplication_1_1_piece}{Piece} object, moves along diagonals. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapplication_1_1_bishop_a824e813916e5f1457225e6374c5a102b}{\index{application\+::\+Bishop@{application\+::\+Bishop}!Bishop@{Bishop}}
+\index{Bishop@{Bishop}!application\+::\+Bishop@{application\+::\+Bishop}}
+\subsubsection[{Bishop}]{\setlength{\rightskip}{0pt plus 5cm}application.\+Bishop.\+Bishop (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{Game.\+O\+W\+N\+E\+R}]{owner}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapplication_1_1_bishop_a824e813916e5f1457225e6374c5a102b}
+
+
+Only constructor, simply sets internals to parameters and gathers some data from the \hyperlink{classapplication_1_1_map}{Map}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Integer specifying the x position \\
+\hline
+{\em y} & Integer specifying the y position \\
+\hline
+{\em owner} & O\+W\+N\+E\+R enumeration telling which player owns the \hyperlink{classapplication_1_1_piece}{Piece} \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

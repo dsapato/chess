@@ -62,6 +62,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -91,59 +92,563 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">application.Map Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Keeps track of location of Pieces and determines available moves.  
+ <a href="classapplication_1_1_map.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a405c4fa754f25e33bd8eafee061d1c5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a405c4fa754f25e33bd8eafee061d1c5d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></tr>
-<tr class="separator:a405c4fa754f25e33bd8eafee061d1c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b89e6a6153b710c4186559c1b9b22b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b89e6a6153b710c4186559c1b9b22b6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_map.html#a4b89e6a6153b710c4186559c1b9b22b6">Map</a> ()</td></tr>
+<tr class="memdesc:a4b89e6a6153b710c4186559c1b9b22b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Only constructor, creates SIZE by SIZE square of tiles. <br /></td></tr>
+<tr class="separator:a4b89e6a6153b710c4186559c1b9b22b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b9639952785a325be6f0251e4120658"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b9639952785a325be6f0251e4120658"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_map.html#a0b9639952785a325be6f0251e4120658">draw</a> ()</td></tr>
+<tr class="memdesc:a0b9639952785a325be6f0251e4120658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the squares of the board. <br /></td></tr>
 <tr class="separator:a0b9639952785a325be6f0251e4120658"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bdc2326a0f637cc37877f480546e8cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0bdc2326a0f637cc37877f480546e8cd"></a>
-Vector&lt; <a class="el" href="classapplication_1_1_pair.html">Pair</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getRowPositionsAt</b> (int x, int y, Game.OWNER owner)</td></tr>
+<tr class="memitem:a0bdc2326a0f637cc37877f480546e8cd"><td class="memItemLeft" align="right" valign="top">Vector&lt; <a class="el" href="classapplication_1_1_pair.html">Pair</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_map.html#a0bdc2326a0f637cc37877f480546e8cd">getRowPositionsAt</a> (int x, int y, Game.OWNER owner)</td></tr>
+<tr class="memdesc:a0bdc2326a0f637cc37877f480546e8cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return Vector of the positions of tiles in that row.  <a href="#a0bdc2326a0f637cc37877f480546e8cd">More...</a><br /></td></tr>
 <tr class="separator:a0bdc2326a0f637cc37877f480546e8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7236d3894ef2460f49341c63ca24d30a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7236d3894ef2460f49341c63ca24d30a"></a>
-Vector&lt; <a class="el" href="classapplication_1_1_pair.html">Pair</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getColumnPositionsAt</b> (int x, int y, Game.OWNER owner)</td></tr>
+<tr class="memitem:a7236d3894ef2460f49341c63ca24d30a"><td class="memItemLeft" align="right" valign="top">Vector&lt; <a class="el" href="classapplication_1_1_pair.html">Pair</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_map.html#a7236d3894ef2460f49341c63ca24d30a">getColumnPositionsAt</a> (int x, int y, Game.OWNER owner)</td></tr>
+<tr class="memdesc:a7236d3894ef2460f49341c63ca24d30a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return Vector of the positions of tiles in that column.  <a href="#a7236d3894ef2460f49341c63ca24d30a">More...</a><br /></td></tr>
 <tr class="separator:a7236d3894ef2460f49341c63ca24d30a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57789d28a30b28e06bc2f34bfc0ea114"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57789d28a30b28e06bc2f34bfc0ea114"></a>
-Vector&lt; <a class="el" href="classapplication_1_1_pair.html">Pair</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getDiagonalBLtoTR</b> (int x, int y, Game.OWNER owner)</td></tr>
+<tr class="memitem:a57789d28a30b28e06bc2f34bfc0ea114"><td class="memItemLeft" align="right" valign="top">Vector&lt; <a class="el" href="classapplication_1_1_pair.html">Pair</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_map.html#a57789d28a30b28e06bc2f34bfc0ea114">getDiagonalBLtoTR</a> (int x, int y, Game.OWNER owner)</td></tr>
+<tr class="memdesc:a57789d28a30b28e06bc2f34bfc0ea114"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return Vector of the positions of tiles in that diagonal, bottom left to top right.  <a href="#a57789d28a30b28e06bc2f34bfc0ea114">More...</a><br /></td></tr>
 <tr class="separator:a57789d28a30b28e06bc2f34bfc0ea114"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3f89ab9eda95d77a1ea1f135ec69b0a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af3f89ab9eda95d77a1ea1f135ec69b0a"></a>
-Vector&lt; <a class="el" href="classapplication_1_1_pair.html">Pair</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getDiagonalTLtoBR</b> (int x, int y, Game.OWNER owner)</td></tr>
+<tr class="memitem:af3f89ab9eda95d77a1ea1f135ec69b0a"><td class="memItemLeft" align="right" valign="top">Vector&lt; <a class="el" href="classapplication_1_1_pair.html">Pair</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_map.html#af3f89ab9eda95d77a1ea1f135ec69b0a">getDiagonalTLtoBR</a> (int x, int y, Game.OWNER owner)</td></tr>
+<tr class="memdesc:af3f89ab9eda95d77a1ea1f135ec69b0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return Vector of the positions of tiles in that diagonal, top left to bottom right.  <a href="#af3f89ab9eda95d77a1ea1f135ec69b0a">More...</a><br /></td></tr>
 <tr class="separator:af3f89ab9eda95d77a1ea1f135ec69b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cbd93ac3f3085fff563bd26a45524ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2cbd93ac3f3085fff563bd26a45524ba"></a>
-boolean&#160;</td><td class="memItemRight" valign="bottom"><b>inBounds</b> (int x, int y)</td></tr>
+<tr class="memitem:a2cbd93ac3f3085fff563bd26a45524ba"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_map.html#a2cbd93ac3f3085fff563bd26a45524ba">inBounds</a> (int x, int y)</td></tr>
+<tr class="memdesc:a2cbd93ac3f3085fff563bd26a45524ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the specified position is a valid spot.  <a href="#a2cbd93ac3f3085fff563bd26a45524ba">More...</a><br /></td></tr>
 <tr class="separator:a2cbd93ac3f3085fff563bd26a45524ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c8ecfb3c342531fcf2e82b9951dacd9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c8ecfb3c342531fcf2e82b9951dacd9"></a>
-boolean&#160;</td><td class="memItemRight" valign="bottom"><b>checkTileOccupied</b> (int x, int y)</td></tr>
+<tr class="memitem:a4c8ecfb3c342531fcf2e82b9951dacd9"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_map.html#a4c8ecfb3c342531fcf2e82b9951dacd9">checkTileOccupied</a> (int x, int y)</td></tr>
+<tr class="memdesc:a4c8ecfb3c342531fcf2e82b9951dacd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the tile has a <a class="el" href="classapplication_1_1_piece.html" title="A superclass for all game pieces. ">Piece</a> on it.  <a href="#a4c8ecfb3c342531fcf2e82b9951dacd9">More...</a><br /></td></tr>
 <tr class="separator:a4c8ecfb3c342531fcf2e82b9951dacd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace2bcd71a180c9abcc48299dbded34f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ace2bcd71a180c9abcc48299dbded34f8"></a>
-boolean&#160;</td><td class="memItemRight" valign="bottom"><b>checkTileEnemy</b> (int x, int y, Game.OWNER owner)</td></tr>
+<tr class="memitem:ace2bcd71a180c9abcc48299dbded34f8"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_map.html#ace2bcd71a180c9abcc48299dbded34f8">checkTileEnemy</a> (int x, int y, Game.OWNER owner)</td></tr>
+<tr class="memdesc:ace2bcd71a180c9abcc48299dbded34f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the tile has an enemy <a class="el" href="classapplication_1_1_piece.html" title="A superclass for all game pieces. ">Piece</a> on it.  <a href="#ace2bcd71a180c9abcc48299dbded34f8">More...</a><br /></td></tr>
 <tr class="separator:ace2bcd71a180c9abcc48299dbded34f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf9ab16c56c49259ce5435e708db81d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf9ab16c56c49259ce5435e708db81d3"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getWidth</b> ()</td></tr>
+<tr class="memitem:acf9ab16c56c49259ce5435e708db81d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_map.html#acf9ab16c56c49259ce5435e708db81d3">getWidth</a> ()</td></tr>
+<tr class="memdesc:acf9ab16c56c49259ce5435e708db81d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter of number of MapTiles wide the map is.  <a href="#acf9ab16c56c49259ce5435e708db81d3">More...</a><br /></td></tr>
 <tr class="separator:acf9ab16c56c49259ce5435e708db81d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a937a0d16608ab0f866484f50cf3e2756"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a937a0d16608ab0f866484f50cf3e2756"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getHeight</b> ()</td></tr>
+<tr class="memitem:a937a0d16608ab0f866484f50cf3e2756"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_map.html#a937a0d16608ab0f866484f50cf3e2756">getHeight</a> ()</td></tr>
+<tr class="memdesc:a937a0d16608ab0f866484f50cf3e2756"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter of number of MapTiles tall the map is.  <a href="#a937a0d16608ab0f866484f50cf3e2756">More...</a><br /></td></tr>
 <tr class="separator:a937a0d16608ab0f866484f50cf3e2756"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f0155540d45815c84b1f1fef5c02b78"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f0155540d45815c84b1f1fef5c02b78"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getTileWidth</b> ()</td></tr>
+<tr class="memitem:a1f0155540d45815c84b1f1fef5c02b78"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_map.html#a1f0155540d45815c84b1f1fef5c02b78">getTileWidth</a> ()</td></tr>
+<tr class="memdesc:a1f0155540d45815c84b1f1fef5c02b78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter of tile width.  <a href="#a1f0155540d45815c84b1f1fef5c02b78">More...</a><br /></td></tr>
 <tr class="separator:a1f0155540d45815c84b1f1fef5c02b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed96fe881a45be9f60937b28228e5690"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed96fe881a45be9f60937b28228e5690"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getTileHeight</b> ()</td></tr>
+<tr class="memitem:aed96fe881a45be9f60937b28228e5690"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_map.html#aed96fe881a45be9f60937b28228e5690">getTileHeight</a> ()</td></tr>
+<tr class="memdesc:aed96fe881a45be9f60937b28228e5690"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter of tile height.  <a href="#aed96fe881a45be9f60937b28228e5690">More...</a><br /></td></tr>
 <tr class="separator:aed96fe881a45be9f60937b28228e5690"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc7ffbed0a366b2e703b1ea3757d0d6a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc7ffbed0a366b2e703b1ea3757d0d6a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setTileOwner</b> (int x, int y, Game.OWNER owner)</td></tr>
+<tr class="memitem:abc7ffbed0a366b2e703b1ea3757d0d6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_map.html#abc7ffbed0a366b2e703b1ea3757d0d6a">setTileOwner</a> (int x, int y, Game.OWNER owner)</td></tr>
+<tr class="memdesc:abc7ffbed0a366b2e703b1ea3757d0d6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter of tile ownership.  <a href="#abc7ffbed0a366b2e703b1ea3757d0d6a">More...</a><br /></td></tr>
 <tr class="separator:abc7ffbed0a366b2e703b1ea3757d0d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Keeps track of location of Pieces and determines available moves. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ace2bcd71a180c9abcc48299dbded34f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean application.Map.checkTileEnemy </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Game.OWNER&#160;</td>
+          <td class="paramname"><em>owner</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the tile has an enemy <a class="el" href="classapplication_1_1_piece.html" title="A superclass for all game pieces. ">Piece</a> on it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>x-coordinate to check </td></tr>
+    <tr><td class="paramname">y</td><td>y-coordinate to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if tile has enemy <a class="el" href="classapplication_1_1_piece.html" title="A superclass for all game pieces. ">Piece</a>, false otherwise </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4c8ecfb3c342531fcf2e82b9951dacd9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean application.Map.checkTileOccupied </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the tile has a <a class="el" href="classapplication_1_1_piece.html" title="A superclass for all game pieces. ">Piece</a> on it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>x-coordinate to check </td></tr>
+    <tr><td class="paramname">y</td><td>y-coordinate to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if tile has <a class="el" href="classapplication_1_1_piece.html" title="A superclass for all game pieces. ">Piece</a>, false otherwise </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7236d3894ef2460f49341c63ca24d30a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector&lt;<a class="el" href="classapplication_1_1_pair.html">Pair</a>&gt; application.Map.getColumnPositionsAt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Game.OWNER&#160;</td>
+          <td class="paramname"><em>owner</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return Vector of the positions of tiles in that column. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>x-coordinate to start search from </td></tr>
+    <tr><td class="paramname">y</td><td>y-coordinate to start search from </td></tr>
+    <tr><td class="paramname">owner</td><td>Who owns the <a class="el" href="classapplication_1_1_piece.html" title="A superclass for all game pieces. ">Piece</a> that wants this information </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Positions of all of the moves possible </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a57789d28a30b28e06bc2f34bfc0ea114"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector&lt;<a class="el" href="classapplication_1_1_pair.html">Pair</a>&gt; application.Map.getDiagonalBLtoTR </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Game.OWNER&#160;</td>
+          <td class="paramname"><em>owner</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return Vector of the positions of tiles in that diagonal, bottom left to top right. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>x-coordinate to start search from </td></tr>
+    <tr><td class="paramname">y</td><td>y-coordinate to start search from </td></tr>
+    <tr><td class="paramname">owner</td><td>Who owns the <a class="el" href="classapplication_1_1_piece.html" title="A superclass for all game pieces. ">Piece</a> that wants this information </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Positions of all of the moves possible </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af3f89ab9eda95d77a1ea1f135ec69b0a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector&lt;<a class="el" href="classapplication_1_1_pair.html">Pair</a>&gt; application.Map.getDiagonalTLtoBR </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Game.OWNER&#160;</td>
+          <td class="paramname"><em>owner</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return Vector of the positions of tiles in that diagonal, top left to bottom right. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>x-coordinate to start search from </td></tr>
+    <tr><td class="paramname">y</td><td>y-coordinate to start search from </td></tr>
+    <tr><td class="paramname">owner</td><td>Who owns the <a class="el" href="classapplication_1_1_piece.html" title="A superclass for all game pieces. ">Piece</a> that wants this information </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Positions of all of the moves possible </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a937a0d16608ab0f866484f50cf3e2756"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int application.Map.getHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter of number of MapTiles tall the map is. </p>
+<dl class="section return"><dt>Returns</dt><dd>number of MapTiles in a map column </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0bdc2326a0f637cc37877f480546e8cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector&lt;<a class="el" href="classapplication_1_1_pair.html">Pair</a>&gt; application.Map.getRowPositionsAt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Game.OWNER&#160;</td>
+          <td class="paramname"><em>owner</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return Vector of the positions of tiles in that row. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>x-coordinate to start search from </td></tr>
+    <tr><td class="paramname">y</td><td>y-coordinate to start search from </td></tr>
+    <tr><td class="paramname">owner</td><td>Who owns the <a class="el" href="classapplication_1_1_piece.html" title="A superclass for all game pieces. ">Piece</a> that wants this information </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Positions of all of the moves possible </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aed96fe881a45be9f60937b28228e5690"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int application.Map.getTileHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter of tile height. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pixels in height of tile </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1f0155540d45815c84b1f1fef5c02b78"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int application.Map.getTileWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter of tile width. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pixels in width of tile </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acf9ab16c56c49259ce5435e708db81d3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int application.Map.getWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter of number of MapTiles wide the map is. </p>
+<dl class="section return"><dt>Returns</dt><dd>number of MapTiles in a map row </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2cbd93ac3f3085fff563bd26a45524ba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean application.Map.inBounds </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the specified position is a valid spot. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>x-coordinate to check </td></tr>
+    <tr><td class="paramname">y</td><td>y-coordinate to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true is valid spot, false otherwise </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abc7ffbed0a366b2e703b1ea3757d0d6a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void application.Map.setTileOwner </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Game.OWNER&#160;</td>
+          <td class="paramname"><em>owner</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Setter of tile ownership. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>x-coordinate of tile to set </td></tr>
+    <tr><td class="paramname">y</td><td>y-coordinate of tile to set </td></tr>
+    <tr><td class="paramname">owner</td><td>Who to own the tile </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/application/Map.java</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 15 2014 17:59:57 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 18 2014 11:43:41 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

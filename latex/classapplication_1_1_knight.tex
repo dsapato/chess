@@ -1,6 +1,11 @@
 \hypertarget{classapplication_1_1_knight}{\section{application.\+Knight Class Reference}
 \label{classapplication_1_1_knight}\index{application.\+Knight@{application.\+Knight}}
 }
+
+
+A \hyperlink{classapplication_1_1_piece}{Piece} object, moves in an \char`\"{}\+L\char`\"{} and can jump pieces.  
+
+
 Inheritance diagram for application.\+Knight\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,13 +15,40 @@ Inheritance diagram for application.\+Knight\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classapplication_1_1_knight_a514487094841cbb827eea58b780f488e}{{\bfseries Knight} (int x, int y, Game.\+O\+W\+N\+E\+R owner)}\label{classapplication_1_1_knight_a514487094841cbb827eea58b780f488e}
+\hyperlink{classapplication_1_1_knight_a514487094841cbb827eea58b780f488e}{Knight} (int x, int y, Game.\+O\+W\+N\+E\+R \hyperlink{classapplication_1_1_piece_a724f116bd99a66a6f6bcc8b7b35de131}{owner})
+\begin{DoxyCompactList}\small\item\em Only constructor, simply sets internals to parameters and gathers some data from the \hyperlink{classapplication_1_1_map}{Map}. \end{DoxyCompactList}\item 
+\hypertarget{classapplication_1_1_knight_adf3b8759d81165000cf35274ba4e36b2}{void \hyperlink{classapplication_1_1_knight_adf3b8759d81165000cf35274ba4e36b2}{get\+Moves} ()}\label{classapplication_1_1_knight_adf3b8759d81165000cf35274ba4e36b2}
 
-\item 
-\hypertarget{classapplication_1_1_knight_adf3b8759d81165000cf35274ba4e36b2}{void {\bfseries get\+Moves} ()}\label{classapplication_1_1_knight_adf3b8759d81165000cf35274ba4e36b2}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets all available moves from the \hyperlink{classapplication_1_1_map}{Map} and stores them internally. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A \hyperlink{classapplication_1_1_piece}{Piece} object, moves in an \char`\"{}\+L\char`\"{} and can jump pieces. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapplication_1_1_knight_a514487094841cbb827eea58b780f488e}{\index{application\+::\+Knight@{application\+::\+Knight}!Knight@{Knight}}
+\index{Knight@{Knight}!application\+::\+Knight@{application\+::\+Knight}}
+\subsubsection[{Knight}]{\setlength{\rightskip}{0pt plus 5cm}application.\+Knight.\+Knight (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{Game.\+O\+W\+N\+E\+R}]{owner}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapplication_1_1_knight_a514487094841cbb827eea58b780f488e}
+
+
+Only constructor, simply sets internals to parameters and gathers some data from the \hyperlink{classapplication_1_1_map}{Map}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Integer specifying the x position \\
+\hline
+{\em y} & Integer specifying the y position \\
+\hline
+{\em owner} & O\+W\+N\+E\+R enumeration telling which player owns the \hyperlink{classapplication_1_1_piece}{Piece} \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

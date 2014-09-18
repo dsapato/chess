@@ -1,51 +1,295 @@
 \hypertarget{classapplication_1_1_map}{\section{application.\+Map Class Reference}
 \label{classapplication_1_1_map}\index{application.\+Map@{application.\+Map}}
 }
+
+
+Keeps track of location of Pieces and determines available moves.  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classapplication_1_1_map_a405c4fa754f25e33bd8eafee061d1c5d}{void {\bfseries update} ()}\label{classapplication_1_1_map_a405c4fa754f25e33bd8eafee061d1c5d}
+\hypertarget{classapplication_1_1_map_a4b89e6a6153b710c4186559c1b9b22b6}{\hyperlink{classapplication_1_1_map_a4b89e6a6153b710c4186559c1b9b22b6}{Map} ()}\label{classapplication_1_1_map_a4b89e6a6153b710c4186559c1b9b22b6}
 
-\item 
-\hypertarget{classapplication_1_1_map_a0b9639952785a325be6f0251e4120658}{void {\bfseries draw} ()}\label{classapplication_1_1_map_a0b9639952785a325be6f0251e4120658}
+\begin{DoxyCompactList}\small\item\em Only constructor, creates S\+I\+Z\+E by S\+I\+Z\+E square of tiles. \end{DoxyCompactList}\item 
+\hypertarget{classapplication_1_1_map_a0b9639952785a325be6f0251e4120658}{void \hyperlink{classapplication_1_1_map_a0b9639952785a325be6f0251e4120658}{draw} ()}\label{classapplication_1_1_map_a0b9639952785a325be6f0251e4120658}
 
-\item 
-\hypertarget{classapplication_1_1_map_a0bdc2326a0f637cc37877f480546e8cd}{Vector$<$ \hyperlink{classapplication_1_1_pair}{Pair} $>$ {\bfseries get\+Row\+Positions\+At} (int x, int y, Game.\+O\+W\+N\+E\+R owner)}\label{classapplication_1_1_map_a0bdc2326a0f637cc37877f480546e8cd}
+\begin{DoxyCompactList}\small\item\em Draws the squares of the board. \end{DoxyCompactList}\item 
+Vector$<$ \hyperlink{classapplication_1_1_pair}{Pair} $>$ \hyperlink{classapplication_1_1_map_a0bdc2326a0f637cc37877f480546e8cd}{get\+Row\+Positions\+At} (int x, int y, Game.\+O\+W\+N\+E\+R owner)
+\begin{DoxyCompactList}\small\item\em Return Vector of the positions of tiles in that row. \end{DoxyCompactList}\item 
+Vector$<$ \hyperlink{classapplication_1_1_pair}{Pair} $>$ \hyperlink{classapplication_1_1_map_a7236d3894ef2460f49341c63ca24d30a}{get\+Column\+Positions\+At} (int x, int y, Game.\+O\+W\+N\+E\+R owner)
+\begin{DoxyCompactList}\small\item\em Return Vector of the positions of tiles in that column. \end{DoxyCompactList}\item 
+Vector$<$ \hyperlink{classapplication_1_1_pair}{Pair} $>$ \hyperlink{classapplication_1_1_map_a57789d28a30b28e06bc2f34bfc0ea114}{get\+Diagonal\+B\+Lto\+T\+R} (int x, int y, Game.\+O\+W\+N\+E\+R owner)
+\begin{DoxyCompactList}\small\item\em Return Vector of the positions of tiles in that diagonal, bottom left to top right. \end{DoxyCompactList}\item 
+Vector$<$ \hyperlink{classapplication_1_1_pair}{Pair} $>$ \hyperlink{classapplication_1_1_map_af3f89ab9eda95d77a1ea1f135ec69b0a}{get\+Diagonal\+T\+Lto\+B\+R} (int x, int y, Game.\+O\+W\+N\+E\+R owner)
+\begin{DoxyCompactList}\small\item\em Return Vector of the positions of tiles in that diagonal, top left to bottom right. \end{DoxyCompactList}\item 
+boolean \hyperlink{classapplication_1_1_map_a2cbd93ac3f3085fff563bd26a45524ba}{in\+Bounds} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Checks if the specified position is a valid spot. \end{DoxyCompactList}\item 
+boolean \hyperlink{classapplication_1_1_map_a4c8ecfb3c342531fcf2e82b9951dacd9}{check\+Tile\+Occupied} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Checks if the tile has a \hyperlink{classapplication_1_1_piece}{Piece} on it. \end{DoxyCompactList}\item 
+boolean \hyperlink{classapplication_1_1_map_ace2bcd71a180c9abcc48299dbded34f8}{check\+Tile\+Enemy} (int x, int y, Game.\+O\+W\+N\+E\+R owner)
+\begin{DoxyCompactList}\small\item\em Checks if the tile has an enemy \hyperlink{classapplication_1_1_piece}{Piece} on it. \end{DoxyCompactList}\item 
+int \hyperlink{classapplication_1_1_map_acf9ab16c56c49259ce5435e708db81d3}{get\+Width} ()
+\begin{DoxyCompactList}\small\item\em Getter of number of Map\+Tiles wide the map is. \end{DoxyCompactList}\item 
+int \hyperlink{classapplication_1_1_map_a937a0d16608ab0f866484f50cf3e2756}{get\+Height} ()
+\begin{DoxyCompactList}\small\item\em Getter of number of Map\+Tiles tall the map is. \end{DoxyCompactList}\item 
+int \hyperlink{classapplication_1_1_map_a1f0155540d45815c84b1f1fef5c02b78}{get\+Tile\+Width} ()
+\begin{DoxyCompactList}\small\item\em Getter of tile width. \end{DoxyCompactList}\item 
+int \hyperlink{classapplication_1_1_map_aed96fe881a45be9f60937b28228e5690}{get\+Tile\+Height} ()
+\begin{DoxyCompactList}\small\item\em Getter of tile height. \end{DoxyCompactList}\item 
+void \hyperlink{classapplication_1_1_map_abc7ffbed0a366b2e703b1ea3757d0d6a}{set\+Tile\+Owner} (int x, int y, Game.\+O\+W\+N\+E\+R owner)
+\begin{DoxyCompactList}\small\item\em Setter of tile ownership. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\item 
-\hypertarget{classapplication_1_1_map_a7236d3894ef2460f49341c63ca24d30a}{Vector$<$ \hyperlink{classapplication_1_1_pair}{Pair} $>$ {\bfseries get\+Column\+Positions\+At} (int x, int y, Game.\+O\+W\+N\+E\+R owner)}\label{classapplication_1_1_map_a7236d3894ef2460f49341c63ca24d30a}
 
-\item 
-\hypertarget{classapplication_1_1_map_a57789d28a30b28e06bc2f34bfc0ea114}{Vector$<$ \hyperlink{classapplication_1_1_pair}{Pair} $>$ {\bfseries get\+Diagonal\+B\+Lto\+T\+R} (int x, int y, Game.\+O\+W\+N\+E\+R owner)}\label{classapplication_1_1_map_a57789d28a30b28e06bc2f34bfc0ea114}
+\subsection{Detailed Description}
+Keeps track of location of Pieces and determines available moves. 
 
-\item 
-\hypertarget{classapplication_1_1_map_af3f89ab9eda95d77a1ea1f135ec69b0a}{Vector$<$ \hyperlink{classapplication_1_1_pair}{Pair} $>$ {\bfseries get\+Diagonal\+T\+Lto\+B\+R} (int x, int y, Game.\+O\+W\+N\+E\+R owner)}\label{classapplication_1_1_map_af3f89ab9eda95d77a1ea1f135ec69b0a}
+\subsection{Member Function Documentation}
+\hypertarget{classapplication_1_1_map_ace2bcd71a180c9abcc48299dbded34f8}{\index{application\+::\+Map@{application\+::\+Map}!check\+Tile\+Enemy@{check\+Tile\+Enemy}}
+\index{check\+Tile\+Enemy@{check\+Tile\+Enemy}!application\+::\+Map@{application\+::\+Map}}
+\subsubsection[{check\+Tile\+Enemy}]{\setlength{\rightskip}{0pt plus 5cm}boolean application.\+Map.\+check\+Tile\+Enemy (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{Game.\+O\+W\+N\+E\+R}]{owner}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapplication_1_1_map_ace2bcd71a180c9abcc48299dbded34f8}
 
-\item 
-\hypertarget{classapplication_1_1_map_a2cbd93ac3f3085fff563bd26a45524ba}{boolean {\bfseries in\+Bounds} (int x, int y)}\label{classapplication_1_1_map_a2cbd93ac3f3085fff563bd26a45524ba}
 
-\item 
-\hypertarget{classapplication_1_1_map_a4c8ecfb3c342531fcf2e82b9951dacd9}{boolean {\bfseries check\+Tile\+Occupied} (int x, int y)}\label{classapplication_1_1_map_a4c8ecfb3c342531fcf2e82b9951dacd9}
+Checks if the tile has an enemy \hyperlink{classapplication_1_1_piece}{Piece} on it. 
 
-\item 
-\hypertarget{classapplication_1_1_map_ace2bcd71a180c9abcc48299dbded34f8}{boolean {\bfseries check\+Tile\+Enemy} (int x, int y, Game.\+O\+W\+N\+E\+R owner)}\label{classapplication_1_1_map_ace2bcd71a180c9abcc48299dbded34f8}
 
-\item 
-\hypertarget{classapplication_1_1_map_acf9ab16c56c49259ce5435e708db81d3}{int {\bfseries get\+Width} ()}\label{classapplication_1_1_map_acf9ab16c56c49259ce5435e708db81d3}
+\begin{DoxyParams}{Parameters}
+{\em x} & x-\/coordinate to check \\
+\hline
+{\em y} & y-\/coordinate to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if tile has enemy \hyperlink{classapplication_1_1_piece}{Piece}, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classapplication_1_1_map_a4c8ecfb3c342531fcf2e82b9951dacd9}{\index{application\+::\+Map@{application\+::\+Map}!check\+Tile\+Occupied@{check\+Tile\+Occupied}}
+\index{check\+Tile\+Occupied@{check\+Tile\+Occupied}!application\+::\+Map@{application\+::\+Map}}
+\subsubsection[{check\+Tile\+Occupied}]{\setlength{\rightskip}{0pt plus 5cm}boolean application.\+Map.\+check\+Tile\+Occupied (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapplication_1_1_map_a4c8ecfb3c342531fcf2e82b9951dacd9}
 
-\item 
-\hypertarget{classapplication_1_1_map_a937a0d16608ab0f866484f50cf3e2756}{int {\bfseries get\+Height} ()}\label{classapplication_1_1_map_a937a0d16608ab0f866484f50cf3e2756}
 
-\item 
-\hypertarget{classapplication_1_1_map_a1f0155540d45815c84b1f1fef5c02b78}{int {\bfseries get\+Tile\+Width} ()}\label{classapplication_1_1_map_a1f0155540d45815c84b1f1fef5c02b78}
+Checks if the tile has a \hyperlink{classapplication_1_1_piece}{Piece} on it. 
 
-\item 
-\hypertarget{classapplication_1_1_map_aed96fe881a45be9f60937b28228e5690}{int {\bfseries get\+Tile\+Height} ()}\label{classapplication_1_1_map_aed96fe881a45be9f60937b28228e5690}
 
-\item 
-\hypertarget{classapplication_1_1_map_abc7ffbed0a366b2e703b1ea3757d0d6a}{void {\bfseries set\+Tile\+Owner} (int x, int y, Game.\+O\+W\+N\+E\+R owner)}\label{classapplication_1_1_map_abc7ffbed0a366b2e703b1ea3757d0d6a}
+\begin{DoxyParams}{Parameters}
+{\em x} & x-\/coordinate to check \\
+\hline
+{\em y} & y-\/coordinate to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if tile has \hyperlink{classapplication_1_1_piece}{Piece}, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classapplication_1_1_map_a7236d3894ef2460f49341c63ca24d30a}{\index{application\+::\+Map@{application\+::\+Map}!get\+Column\+Positions\+At@{get\+Column\+Positions\+At}}
+\index{get\+Column\+Positions\+At@{get\+Column\+Positions\+At}!application\+::\+Map@{application\+::\+Map}}
+\subsubsection[{get\+Column\+Positions\+At}]{\setlength{\rightskip}{0pt plus 5cm}Vector$<${\bf Pair}$>$ application.\+Map.\+get\+Column\+Positions\+At (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{Game.\+O\+W\+N\+E\+R}]{owner}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapplication_1_1_map_a7236d3894ef2460f49341c63ca24d30a}
 
-\end{DoxyCompactItemize}
+
+Return Vector of the positions of tiles in that column. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x-\/coordinate to start search from \\
+\hline
+{\em y} & y-\/coordinate to start search from \\
+\hline
+{\em owner} & Who owns the \hyperlink{classapplication_1_1_piece}{Piece} that wants this information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Positions of all of the moves possible 
+\end{DoxyReturn}
+\hypertarget{classapplication_1_1_map_a57789d28a30b28e06bc2f34bfc0ea114}{\index{application\+::\+Map@{application\+::\+Map}!get\+Diagonal\+B\+Lto\+T\+R@{get\+Diagonal\+B\+Lto\+T\+R}}
+\index{get\+Diagonal\+B\+Lto\+T\+R@{get\+Diagonal\+B\+Lto\+T\+R}!application\+::\+Map@{application\+::\+Map}}
+\subsubsection[{get\+Diagonal\+B\+Lto\+T\+R}]{\setlength{\rightskip}{0pt plus 5cm}Vector$<${\bf Pair}$>$ application.\+Map.\+get\+Diagonal\+B\+Lto\+T\+R (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{Game.\+O\+W\+N\+E\+R}]{owner}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapplication_1_1_map_a57789d28a30b28e06bc2f34bfc0ea114}
+
+
+Return Vector of the positions of tiles in that diagonal, bottom left to top right. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x-\/coordinate to start search from \\
+\hline
+{\em y} & y-\/coordinate to start search from \\
+\hline
+{\em owner} & Who owns the \hyperlink{classapplication_1_1_piece}{Piece} that wants this information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Positions of all of the moves possible 
+\end{DoxyReturn}
+\hypertarget{classapplication_1_1_map_af3f89ab9eda95d77a1ea1f135ec69b0a}{\index{application\+::\+Map@{application\+::\+Map}!get\+Diagonal\+T\+Lto\+B\+R@{get\+Diagonal\+T\+Lto\+B\+R}}
+\index{get\+Diagonal\+T\+Lto\+B\+R@{get\+Diagonal\+T\+Lto\+B\+R}!application\+::\+Map@{application\+::\+Map}}
+\subsubsection[{get\+Diagonal\+T\+Lto\+B\+R}]{\setlength{\rightskip}{0pt plus 5cm}Vector$<${\bf Pair}$>$ application.\+Map.\+get\+Diagonal\+T\+Lto\+B\+R (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{Game.\+O\+W\+N\+E\+R}]{owner}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapplication_1_1_map_af3f89ab9eda95d77a1ea1f135ec69b0a}
+
+
+Return Vector of the positions of tiles in that diagonal, top left to bottom right. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x-\/coordinate to start search from \\
+\hline
+{\em y} & y-\/coordinate to start search from \\
+\hline
+{\em owner} & Who owns the \hyperlink{classapplication_1_1_piece}{Piece} that wants this information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Positions of all of the moves possible 
+\end{DoxyReturn}
+\hypertarget{classapplication_1_1_map_a937a0d16608ab0f866484f50cf3e2756}{\index{application\+::\+Map@{application\+::\+Map}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!application\+::\+Map@{application\+::\+Map}}
+\subsubsection[{get\+Height}]{\setlength{\rightskip}{0pt plus 5cm}int application.\+Map.\+get\+Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapplication_1_1_map_a937a0d16608ab0f866484f50cf3e2756}
+
+
+Getter of number of Map\+Tiles tall the map is. 
+
+\begin{DoxyReturn}{Returns}
+number of Map\+Tiles in a map column 
+\end{DoxyReturn}
+\hypertarget{classapplication_1_1_map_a0bdc2326a0f637cc37877f480546e8cd}{\index{application\+::\+Map@{application\+::\+Map}!get\+Row\+Positions\+At@{get\+Row\+Positions\+At}}
+\index{get\+Row\+Positions\+At@{get\+Row\+Positions\+At}!application\+::\+Map@{application\+::\+Map}}
+\subsubsection[{get\+Row\+Positions\+At}]{\setlength{\rightskip}{0pt plus 5cm}Vector$<${\bf Pair}$>$ application.\+Map.\+get\+Row\+Positions\+At (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{Game.\+O\+W\+N\+E\+R}]{owner}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapplication_1_1_map_a0bdc2326a0f637cc37877f480546e8cd}
+
+
+Return Vector of the positions of tiles in that row. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x-\/coordinate to start search from \\
+\hline
+{\em y} & y-\/coordinate to start search from \\
+\hline
+{\em owner} & Who owns the \hyperlink{classapplication_1_1_piece}{Piece} that wants this information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Positions of all of the moves possible 
+\end{DoxyReturn}
+\hypertarget{classapplication_1_1_map_aed96fe881a45be9f60937b28228e5690}{\index{application\+::\+Map@{application\+::\+Map}!get\+Tile\+Height@{get\+Tile\+Height}}
+\index{get\+Tile\+Height@{get\+Tile\+Height}!application\+::\+Map@{application\+::\+Map}}
+\subsubsection[{get\+Tile\+Height}]{\setlength{\rightskip}{0pt plus 5cm}int application.\+Map.\+get\+Tile\+Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapplication_1_1_map_aed96fe881a45be9f60937b28228e5690}
+
+
+Getter of tile height. 
+
+\begin{DoxyReturn}{Returns}
+Pixels in height of tile 
+\end{DoxyReturn}
+\hypertarget{classapplication_1_1_map_a1f0155540d45815c84b1f1fef5c02b78}{\index{application\+::\+Map@{application\+::\+Map}!get\+Tile\+Width@{get\+Tile\+Width}}
+\index{get\+Tile\+Width@{get\+Tile\+Width}!application\+::\+Map@{application\+::\+Map}}
+\subsubsection[{get\+Tile\+Width}]{\setlength{\rightskip}{0pt plus 5cm}int application.\+Map.\+get\+Tile\+Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapplication_1_1_map_a1f0155540d45815c84b1f1fef5c02b78}
+
+
+Getter of tile width. 
+
+\begin{DoxyReturn}{Returns}
+Pixels in width of tile 
+\end{DoxyReturn}
+\hypertarget{classapplication_1_1_map_acf9ab16c56c49259ce5435e708db81d3}{\index{application\+::\+Map@{application\+::\+Map}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!application\+::\+Map@{application\+::\+Map}}
+\subsubsection[{get\+Width}]{\setlength{\rightskip}{0pt plus 5cm}int application.\+Map.\+get\+Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapplication_1_1_map_acf9ab16c56c49259ce5435e708db81d3}
+
+
+Getter of number of Map\+Tiles wide the map is. 
+
+\begin{DoxyReturn}{Returns}
+number of Map\+Tiles in a map row 
+\end{DoxyReturn}
+\hypertarget{classapplication_1_1_map_a2cbd93ac3f3085fff563bd26a45524ba}{\index{application\+::\+Map@{application\+::\+Map}!in\+Bounds@{in\+Bounds}}
+\index{in\+Bounds@{in\+Bounds}!application\+::\+Map@{application\+::\+Map}}
+\subsubsection[{in\+Bounds}]{\setlength{\rightskip}{0pt plus 5cm}boolean application.\+Map.\+in\+Bounds (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapplication_1_1_map_a2cbd93ac3f3085fff563bd26a45524ba}
+
+
+Checks if the specified position is a valid spot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x-\/coordinate to check \\
+\hline
+{\em y} & y-\/coordinate to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true is valid spot, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classapplication_1_1_map_abc7ffbed0a366b2e703b1ea3757d0d6a}{\index{application\+::\+Map@{application\+::\+Map}!set\+Tile\+Owner@{set\+Tile\+Owner}}
+\index{set\+Tile\+Owner@{set\+Tile\+Owner}!application\+::\+Map@{application\+::\+Map}}
+\subsubsection[{set\+Tile\+Owner}]{\setlength{\rightskip}{0pt plus 5cm}void application.\+Map.\+set\+Tile\+Owner (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{Game.\+O\+W\+N\+E\+R}]{owner}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapplication_1_1_map_abc7ffbed0a366b2e703b1ea3757d0d6a}
+
+
+Setter of tile ownership. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x-\/coordinate of tile to set \\
+\hline
+{\em y} & y-\/coordinate of tile to set \\
+\hline
+{\em owner} & Who to own the tile \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

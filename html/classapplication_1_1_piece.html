@@ -62,6 +62,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -93,82 +94,248 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">application.Piece Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A superclass for all game pieces.  
+ <a href="classapplication_1_1_piece.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for application.Piece:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classapplication_1_1_piece.png" usemap="#application.Piece_map" alt=""/>
   <map id="application.Piece_map" name="application.Piece_map">
-<area href="classapplication_1_1_bishop.html" alt="application.Bishop" shape="rect" coords="0,56,115,80"/>
-<area href="classapplication_1_1_king.html" alt="application.King" shape="rect" coords="125,56,240,80"/>
-<area href="classapplication_1_1_knight.html" alt="application.Knight" shape="rect" coords="250,56,365,80"/>
-<area href="classapplication_1_1_pawn.html" alt="application.Pawn" shape="rect" coords="375,56,490,80"/>
-<area href="classapplication_1_1_queen.html" alt="application.Queen" shape="rect" coords="500,56,615,80"/>
-<area href="classapplication_1_1_rook.html" alt="application.Rook" shape="rect" coords="625,56,740,80"/>
+<area href="classapplication_1_1_archbishop.html" title="A Piece object, moves in an "L" and in diagonals. " alt="application.Archbishop" shape="rect" coords="152,56,294,80"/>
+<area href="classapplication_1_1_bishop.html" title="A Piece object, moves along diagonals. " alt="application.Bishop" shape="rect" coords="152,112,294,136"/>
+<area href="classapplication_1_1_chancellor.html" title="A Piece object, moves in an "L" and across rows or columns. " alt="application.Chancellor" shape="rect" coords="152,168,294,192"/>
+<area href="classapplication_1_1_king.html" title="A Piece object, must keep alive, moves one space in any direction. " alt="application.King" shape="rect" coords="152,224,294,248"/>
+<area href="classapplication_1_1_knight.html" title="A Piece object, moves in an "L" and can jump pieces. " alt="application.Knight" shape="rect" coords="152,280,294,304"/>
+<area href="classapplication_1_1_pawn.html" title="A Piece object, moves forward one or two space, attacks to the diagonal. " alt="application.Pawn" shape="rect" coords="152,336,294,360"/>
+<area href="classapplication_1_1_queen.html" title="A Piece object, moves along diagonals, rows, and columns. " alt="application.Queen" shape="rect" coords="152,392,294,416"/>
+<area href="classapplication_1_1_rook.html" title="A Piece object, moves across rows and columns. " alt="application.Rook" shape="rect" coords="152,448,294,472"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7845605267af2d616efc66af07d175ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7845605267af2d616efc66af07d175ea"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Piece</b> (int x, int y, Game.OWNER owner)</td></tr>
+<tr class="memitem:a7845605267af2d616efc66af07d175ea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_piece.html#a7845605267af2d616efc66af07d175ea">Piece</a> (int x, int y, Game.OWNER <a class="el" href="classapplication_1_1_piece.html#a724f116bd99a66a6f6bcc8b7b35de131">owner</a>)</td></tr>
+<tr class="memdesc:a7845605267af2d616efc66af07d175ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Only constructor, simply sets internals to parameters and gathers some data from the <a class="el" href="classapplication_1_1_map.html" title="Keeps track of location of Pieces and determines available moves. ">Map</a>.  <a href="#a7845605267af2d616efc66af07d175ea">More...</a><br /></td></tr>
 <tr class="separator:a7845605267af2d616efc66af07d175ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4bdd8cfc85f889c8d7dc840a137cd65"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae4bdd8cfc85f889c8d7dc840a137cd65"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_piece.html#ae4bdd8cfc85f889c8d7dc840a137cd65">draw</a> ()</td></tr>
+<tr class="memdesc:ae4bdd8cfc85f889c8d7dc840a137cd65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws img at (xPos,yPos) of size width by height. <br /></td></tr>
 <tr class="separator:ae4bdd8cfc85f889c8d7dc840a137cd65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acca039f617b0bf259eb1e1d00fbf4cda"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acca039f617b0bf259eb1e1d00fbf4cda"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>getMoves</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_piece.html#acca039f617b0bf259eb1e1d00fbf4cda">getMoves</a> ()</td></tr>
+<tr class="memdesc:acca039f617b0bf259eb1e1d00fbf4cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populates moves, unique to subclass. <br /></td></tr>
 <tr class="separator:acca039f617b0bf259eb1e1d00fbf4cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac91b28148a2b0e38edeba7a42501d99f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac91b28148a2b0e38edeba7a42501d99f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>moveTo</b> (int x, int y)</td></tr>
+<tr class="memitem:ac91b28148a2b0e38edeba7a42501d99f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_piece.html#ac91b28148a2b0e38edeba7a42501d99f">moveTo</a> (int x, int y)</td></tr>
+<tr class="memdesc:ac91b28148a2b0e38edeba7a42501d99f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the piece, clearing old spot and taking control of new one.  <a href="#ac91b28148a2b0e38edeba7a42501d99f">More...</a><br /></td></tr>
 <tr class="separator:ac91b28148a2b0e38edeba7a42501d99f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e58a2e63e94dd3de909e2fd55a7b819"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e58a2e63e94dd3de909e2fd55a7b819"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getX</b> ()</td></tr>
+<tr class="memitem:a2e58a2e63e94dd3de909e2fd55a7b819"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_piece.html#a2e58a2e63e94dd3de909e2fd55a7b819">getX</a> ()</td></tr>
+<tr class="memdesc:a2e58a2e63e94dd3de909e2fd55a7b819"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter of x-coordinate.  <a href="#a2e58a2e63e94dd3de909e2fd55a7b819">More...</a><br /></td></tr>
 <tr class="separator:a2e58a2e63e94dd3de909e2fd55a7b819"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a360e6e106c1254e4b86e69143ca0ce72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a360e6e106c1254e4b86e69143ca0ce72"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getY</b> ()</td></tr>
+<tr class="memitem:a360e6e106c1254e4b86e69143ca0ce72"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_piece.html#a360e6e106c1254e4b86e69143ca0ce72">getY</a> ()</td></tr>
+<tr class="memdesc:a360e6e106c1254e4b86e69143ca0ce72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter of y-coordinate.  <a href="#a360e6e106c1254e4b86e69143ca0ce72">More...</a><br /></td></tr>
 <tr class="separator:a360e6e106c1254e4b86e69143ca0ce72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a70d0ea8dfe2d8ebaf1af52f3468cf972"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70d0ea8dfe2d8ebaf1af52f3468cf972"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>checkMoves</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_piece.html#a70d0ea8dfe2d8ebaf1af52f3468cf972">checkMoves</a> ()</td></tr>
+<tr class="memdesc:a70d0ea8dfe2d8ebaf1af52f3468cf972"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterates through moves checking with <a class="el" href="classapplication_1_1_map.html" title="Keeps track of location of Pieces and determines available moves. ">Map</a> to prove validity. <br /></td></tr>
 <tr class="separator:a70d0ea8dfe2d8ebaf1af52f3468cf972"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:af7a78ee6a0bbbee54b0bf385ab3eda43"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7a78ee6a0bbbee54b0bf385ab3eda43"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>xPos</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_piece.html#af7a78ee6a0bbbee54b0bf385ab3eda43">xPos</a></td></tr>
+<tr class="memdesc:af7a78ee6a0bbbee54b0bf385ab3eda43"><td class="mdescLeft">&#160;</td><td class="mdescRight">X Coordinate of where <a class="el" href="classapplication_1_1_piece.html" title="A superclass for all game pieces. ">Piece</a> is on the board. <br /></td></tr>
 <tr class="separator:af7a78ee6a0bbbee54b0bf385ab3eda43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11da2d0872e6553217daa56a851c7740"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11da2d0872e6553217daa56a851c7740"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>yPos</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_piece.html#a11da2d0872e6553217daa56a851c7740">yPos</a></td></tr>
+<tr class="memdesc:a11da2d0872e6553217daa56a851c7740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y Coordinate of where <a class="el" href="classapplication_1_1_piece.html" title="A superclass for all game pieces. ">Piece</a> is on the board. <br /></td></tr>
 <tr class="separator:a11da2d0872e6553217daa56a851c7740"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8885ca50301c6e85d333f397ad106a6b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8885ca50301c6e85d333f397ad106a6b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>width</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_piece.html#a8885ca50301c6e85d333f397ad106a6b">width</a></td></tr>
+<tr class="memdesc:a8885ca50301c6e85d333f397ad106a6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width in pixels, used for drawing. <br /></td></tr>
 <tr class="separator:a8885ca50301c6e85d333f397ad106a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7f74a095a34bf775cc6b44e5ea1dcbe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7f74a095a34bf775cc6b44e5ea1dcbe"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>height</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_piece.html#af7f74a095a34bf775cc6b44e5ea1dcbe">height</a></td></tr>
+<tr class="memdesc:af7f74a095a34bf775cc6b44e5ea1dcbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Height in pixels, used for drawing. <br /></td></tr>
 <tr class="separator:af7f74a095a34bf775cc6b44e5ea1dcbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a423e3460410ce4199060a42812c79463"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a423e3460410ce4199060a42812c79463"></a>
-BufferedImage&#160;</td><td class="memItemRight" valign="bottom"><b>img</b></td></tr>
+BufferedImage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_piece.html#a423e3460410ce4199060a42812c79463">img</a></td></tr>
+<tr class="memdesc:a423e3460410ce4199060a42812c79463"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image, loaded by subclass, specific to type of <a class="el" href="classapplication_1_1_piece.html" title="A superclass for all game pieces. ">Piece</a>. <br /></td></tr>
 <tr class="separator:a423e3460410ce4199060a42812c79463"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e704a1ebc750f4a5f1c640f1cc927f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e704a1ebc750f4a5f1c640f1cc927f4"></a>
-Vector&lt; <a class="el" href="classapplication_1_1_pair.html">Pair</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>moves</b></td></tr>
+Vector&lt; <a class="el" href="classapplication_1_1_pair.html">Pair</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_piece.html#a9e704a1ebc750f4a5f1c640f1cc927f4">moves</a></td></tr>
+<tr class="memdesc:a9e704a1ebc750f4a5f1c640f1cc927f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector expanded as needed to contain current possible moves to take. <br /></td></tr>
 <tr class="separator:a9e704a1ebc750f4a5f1c640f1cc927f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a724f116bd99a66a6f6bcc8b7b35de131"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a724f116bd99a66a6f6bcc8b7b35de131"></a>
-Game.OWNER&#160;</td><td class="memItemRight" valign="bottom"><b>owner</b></td></tr>
+Game.OWNER&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_piece.html#a724f116bd99a66a6f6bcc8b7b35de131">owner</a></td></tr>
+<tr class="memdesc:a724f116bd99a66a6f6bcc8b7b35de131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Which player controls the <a class="el" href="classapplication_1_1_piece.html" title="A superclass for all game pieces. ">Piece</a>. <br /></td></tr>
 <tr class="separator:a724f116bd99a66a6f6bcc8b7b35de131"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8610c3152130255360304aabb534e7cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8610c3152130255360304aabb534e7cb"></a>
-boolean&#160;</td><td class="memItemRight" valign="bottom"><b>firstMove</b></td></tr>
+boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_piece.html#a8610c3152130255360304aabb534e7cb">firstMove</a></td></tr>
+<tr class="memdesc:a8610c3152130255360304aabb534e7cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the <a class="el" href="classapplication_1_1_piece.html" title="A superclass for all game pieces. ">Piece</a> has not moved yet at all. <br /></td></tr>
 <tr class="separator:a8610c3152130255360304aabb534e7cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A superclass for all game pieces. </p>
+<p>Contains things like position, size, image, and moves. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a7845605267af2d616efc66af07d175ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">application.Piece.Piece </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Game.OWNER&#160;</td>
+          <td class="paramname"><em>owner</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Only constructor, simply sets internals to parameters and gathers some data from the <a class="el" href="classapplication_1_1_map.html" title="Keeps track of location of Pieces and determines available moves. ">Map</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Integer specifying the x position </td></tr>
+    <tr><td class="paramname">y</td><td>Integer specifying the y position </td></tr>
+    <tr><td class="paramname">owner</td><td>OWNER enumeration telling which player owns the <a class="el" href="classapplication_1_1_piece.html" title="A superclass for all game pieces. ">Piece</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a2e58a2e63e94dd3de909e2fd55a7b819"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int application.Piece.getX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter of x-coordinate. </p>
+<dl class="section return"><dt>Returns</dt><dd>x-coordinate on map of <a class="el" href="classapplication_1_1_piece.html" title="A superclass for all game pieces. ">Piece</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a360e6e106c1254e4b86e69143ca0ce72"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int application.Piece.getY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter of y-coordinate. </p>
+<dl class="section return"><dt>Returns</dt><dd>y-coordinate on map of <a class="el" href="classapplication_1_1_piece.html" title="A superclass for all game pieces. ">Piece</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac91b28148a2b0e38edeba7a42501d99f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void application.Piece.moveTo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Moves the piece, clearing old spot and taking control of new one. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>x-coordinate on map to move to </td></tr>
+    <tr><td class="paramname">y</td><td>y-coordinate on map to move to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/application/Piece.java</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 15 2014 17:59:57 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 18 2014 11:43:41 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

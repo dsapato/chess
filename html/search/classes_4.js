@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['map',['Map',['../classapplication_1_1_map.html',1,'application']]],
-  ['maptile',['MapTile',['../classapplication_1_1_map_tile.html',1,'application']]]
+  ['king',['King',['../classapplication_1_1_king.html',1,'application']]],
+  ['knight',['Knight',['../classapplication_1_1_knight.html',1,'application']]]
 ];

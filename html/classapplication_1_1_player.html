@@ -62,6 +62,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -92,38 +93,166 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">application.Player Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This keeps tracks of all Pieces, along with drawing and selection.  
+ <a href="classapplication_1_1_player.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a14ac1e2c788fb22e7e5be4e5e6bc1847"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a14ac1e2c788fb22e7e5be4e5e6bc1847"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Player</b> (Game.OWNER playerNum)</td></tr>
+<tr class="memitem:a14ac1e2c788fb22e7e5be4e5e6bc1847"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_player.html#a14ac1e2c788fb22e7e5be4e5e6bc1847">Player</a> (Game.OWNER playerNum)</td></tr>
+<tr class="memdesc:a14ac1e2c788fb22e7e5be4e5e6bc1847"><td class="mdescLeft">&#160;</td><td class="mdescRight">Only constructor, adds pieces to board.  <a href="#a14ac1e2c788fb22e7e5be4e5e6bc1847">More...</a><br /></td></tr>
 <tr class="separator:a14ac1e2c788fb22e7e5be4e5e6bc1847"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fd6b813c9a0ab1e9844d0c13d709a44"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fd6b813c9a0ab1e9844d0c13d709a44"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>drawMoves</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_player.html#a0fd6b813c9a0ab1e9844d0c13d709a44">drawMoves</a> ()</td></tr>
+<tr class="memdesc:a0fd6b813c9a0ab1e9844d0c13d709a44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw possible moves of selected piece. <br /></td></tr>
 <tr class="separator:a0fd6b813c9a0ab1e9844d0c13d709a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad598f6c101732c33ced27c1ec23b7080"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad598f6c101732c33ced27c1ec23b7080"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>drawPieces</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_player.html#ad598f6c101732c33ced27c1ec23b7080">drawPieces</a> ()</td></tr>
+<tr class="memdesc:ad598f6c101732c33ced27c1ec23b7080"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw pieces on board, calls draw function of each piece. <br /></td></tr>
 <tr class="separator:ad598f6c101732c33ced27c1ec23b7080"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc096ccded0197ea0a5a87e09b55507e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc096ccded0197ea0a5a87e09b55507e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>select</b> (int x, int y)</td></tr>
+<tr class="memitem:abc096ccded0197ea0a5a87e09b55507e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_player.html#abc096ccded0197ea0a5a87e09b55507e">select</a> (int x, int y)</td></tr>
+<tr class="memdesc:abc096ccded0197ea0a5a87e09b55507e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle action of clicking at (x,y), depending on <a class="el" href="classapplication_1_1_game.html" title="This is the manager of everything, including the Board, Players, and game loop. ">Game</a> state and turn.  <a href="#abc096ccded0197ea0a5a87e09b55507e">More...</a><br /></td></tr>
 <tr class="separator:abc096ccded0197ea0a5a87e09b55507e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82638976ae19fce3c6e03b589938abaa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82638976ae19fce3c6e03b589938abaa"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>killAt</b> (int x, int y)</td></tr>
+<tr class="memitem:a82638976ae19fce3c6e03b589938abaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_player.html#a82638976ae19fce3c6e03b589938abaa">killAt</a> (int x, int y)</td></tr>
+<tr class="memdesc:a82638976ae19fce3c6e03b589938abaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes <a class="el" href="classapplication_1_1_piece.html" title="A superclass for all game pieces. ">Piece</a> at (x,y)  <a href="#a82638976ae19fce3c6e03b589938abaa">More...</a><br /></td></tr>
 <tr class="separator:a82638976ae19fce3c6e03b589938abaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ade2a529ac843368e351446cde7e6f76b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade2a529ac843368e351446cde7e6f76b"></a>
-Vector&lt; <a class="el" href="classapplication_1_1_piece.html">Piece</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pieces</b></td></tr>
+Vector&lt; <a class="el" href="classapplication_1_1_piece.html">Piece</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_player.html#ade2a529ac843368e351446cde7e6f76b">pieces</a></td></tr>
+<tr class="memdesc:ade2a529ac843368e351446cde7e6f76b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector which holds what Pieces the player owns. <br /></td></tr>
 <tr class="separator:ade2a529ac843368e351446cde7e6f76b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This keeps tracks of all Pieces, along with drawing and selection. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a14ac1e2c788fb22e7e5be4e5e6bc1847"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">application.Player.Player </td>
+          <td>(</td>
+          <td class="paramtype">Game.OWNER&#160;</td>
+          <td class="paramname"><em>playerNum</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Only constructor, adds pieces to board. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">playerNum</td><td>Which player this is, to set ownership of pieces </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a82638976ae19fce3c6e03b589938abaa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void application.Player.killAt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Removes <a class="el" href="classapplication_1_1_piece.html" title="A superclass for all game pieces. ">Piece</a> at (x,y) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>x-coordinate to remove <a class="el" href="classapplication_1_1_piece.html" title="A superclass for all game pieces. ">Piece</a> from </td></tr>
+    <tr><td class="paramname">y</td><td>y-coordinate to remove <a class="el" href="classapplication_1_1_piece.html" title="A superclass for all game pieces. ">Piece</a> from </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abc096ccded0197ea0a5a87e09b55507e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void application.Player.select </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handle action of clicking at (x,y), depending on <a class="el" href="classapplication_1_1_game.html" title="This is the manager of everything, including the Board, Players, and game loop. ">Game</a> state and turn. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>x-coordinate on <a class="el" href="classapplication_1_1_map.html" title="Keeps track of location of Pieces and determines available moves. ">Map</a> </td></tr>
+    <tr><td class="paramname">y</td><td>y-coordinate on <a class="el" href="classapplication_1_1_map.html" title="Keeps track of location of Pieces and determines available moves. ">Map</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/application/Player.java</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 15 2014 17:59:57 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 18 2014 11:43:41 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

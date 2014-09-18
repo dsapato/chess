@@ -6,9 +6,17 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+/**
+ * A Piece object, moves forward one or two space, attacks to the diagonal
+ */
 public class Pawn extends Piece {
 
-	//Constructor
+	/**
+	 * Only constructor, simply sets internals to parameters and gathers some data from the Map
+	 * @param x Integer specifying the x position
+	 * @param y Integer specifying the y position
+	 * @param owner OWNER enumeration telling which player owns the Piece
+	 */	
 	public Pawn(int x, int y, Game.OWNER owner){
 		super(x,y, owner);
 		
@@ -25,7 +33,9 @@ public class Pawn extends Piece {
 		}
 	}
 	
-	//When selected, get all possible moves
+	/**
+	 * Gets all available moves from the Map and stores them internally
+	 */	
 	public void getMoves(){
 		moves.clear();
 		

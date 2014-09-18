@@ -10,20 +10,33 @@ import javax.imageio.ImageIO;
 import application.Game.OWNER;
 import application.Game.STATE;
 
+/**
+ * This keeps tracks of all Pieces, along with drawing and selection
+ */
 public class Player {
 
+	//Who owns the piece
 	private Game.OWNER playerNumber;
 	
+	/**
+	 * Vector which holds what Pieces the player owns
+	 */
 	public Vector<Piece> pieces;
+	//What piece we've clicked on
 	private int selectedPieceIndex;
 	
-	//To highlight tiles
+	//Image To highlight tiles
 	private BufferedImage highlightImage;
+	
+	//Width and height of a tile in pixels
 	private int width;
 	private int height;
 	
 	
-	//Constructor
+	/**
+	 * Only constructor, adds pieces to board
+	 * @param playerNum Which player this is, to set ownership of pieces
+	 */
 	public Player(Game.OWNER playerNum){
 		this.playerNumber = playerNum;
 		
@@ -42,7 +55,9 @@ public class Player {
 		}		
 	}
 	
-	//Draw possible moves
+	/**
+	 * Draw possible moves of selected piece
+	 */
 	public void drawMoves(){
 		if(Game.turn == playerNumber && Game.state == STATE.MOVING){
 			Piece selected = pieces.get(selectedPieceIndex);
@@ -54,7 +69,9 @@ public class Player {
 		}
 	}
 	
-	//Draw pieces
+	/**
+	 * Draw pieces on board, calls draw function of each piece
+	 */
 	public void drawPieces(){
 		int size = pieces.size();
 		for(int i = 0; i < size; i++){
@@ -62,6 +79,9 @@ public class Player {
 		}
 	}
 	
+	/**
+	 * Add all pieces to pieces vector, creating each Piece object
+	 */
 	private void setUpPieces(){
 		
 		//Player One, bottom of board, pawns in row 1, rest row 0.
@@ -107,7 +127,11 @@ public class Player {
 		}	
 	}
 	
-	//Get piece at x,y
+	/**
+	 * Handle action of clicking at (x,y), depending on Game state and turn
+	 * @param x x-coordinate on Map
+	 * @param y y-coordinate on Map
+	 */
 	public void select(int x, int y){
 		//Select a piece if hovering one
 		if(Game.state == STATE.SELECTING){
@@ -142,6 +166,11 @@ public class Player {
 		}
 	}
 	
+	/**
+	 * Removes Piece at (x,y)
+	 * @param x x-coordinate to remove Piece from
+	 * @param y y-coordinate to remove Piece from
+	 */
 	public void killAt(int x, int y){
 		for(int i = 0; i < pieces.size(); i++){
 			if(pieces.get(i).getX() == x && pieces.get(i).getY() == y){

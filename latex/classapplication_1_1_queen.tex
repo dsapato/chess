@@ -1,6 +1,11 @@
 \hypertarget{classapplication_1_1_queen}{\section{application.\+Queen Class Reference}
 \label{classapplication_1_1_queen}\index{application.\+Queen@{application.\+Queen}}
 }
+
+
+A \hyperlink{classapplication_1_1_piece}{Piece} object, moves along diagonals, rows, and columns.  
+
+
 Inheritance diagram for application.\+Queen\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,13 +15,40 @@ Inheritance diagram for application.\+Queen\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classapplication_1_1_queen_a72921fc90666a1931a1e058d0ab63e85}{{\bfseries Queen} (int x, int y, Game.\+O\+W\+N\+E\+R owner)}\label{classapplication_1_1_queen_a72921fc90666a1931a1e058d0ab63e85}
+\hyperlink{classapplication_1_1_queen_a72921fc90666a1931a1e058d0ab63e85}{Queen} (int x, int y, Game.\+O\+W\+N\+E\+R \hyperlink{classapplication_1_1_piece_a724f116bd99a66a6f6bcc8b7b35de131}{owner})
+\begin{DoxyCompactList}\small\item\em Only constructor, simply sets internals to parameters and gathers some data from the \hyperlink{classapplication_1_1_map}{Map}. \end{DoxyCompactList}\item 
+\hypertarget{classapplication_1_1_queen_ab020c2fde4eeb0f6d5e6020434d90b1f}{void \hyperlink{classapplication_1_1_queen_ab020c2fde4eeb0f6d5e6020434d90b1f}{get\+Moves} ()}\label{classapplication_1_1_queen_ab020c2fde4eeb0f6d5e6020434d90b1f}
 
-\item 
-\hypertarget{classapplication_1_1_queen_ab020c2fde4eeb0f6d5e6020434d90b1f}{void {\bfseries get\+Moves} ()}\label{classapplication_1_1_queen_ab020c2fde4eeb0f6d5e6020434d90b1f}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets all available moves from the \hyperlink{classapplication_1_1_map}{Map} and stores them internally. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A \hyperlink{classapplication_1_1_piece}{Piece} object, moves along diagonals, rows, and columns. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapplication_1_1_queen_a72921fc90666a1931a1e058d0ab63e85}{\index{application\+::\+Queen@{application\+::\+Queen}!Queen@{Queen}}
+\index{Queen@{Queen}!application\+::\+Queen@{application\+::\+Queen}}
+\subsubsection[{Queen}]{\setlength{\rightskip}{0pt plus 5cm}application.\+Queen.\+Queen (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{Game.\+O\+W\+N\+E\+R}]{owner}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapplication_1_1_queen_a72921fc90666a1931a1e058d0ab63e85}
+
+
+Only constructor, simply sets internals to parameters and gathers some data from the \hyperlink{classapplication_1_1_map}{Map}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Integer specifying the x position \\
+\hline
+{\em y} & Integer specifying the y position \\
+\hline
+{\em owner} & O\+W\+N\+E\+R enumeration telling which player owns the \hyperlink{classapplication_1_1_piece}{Piece} \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

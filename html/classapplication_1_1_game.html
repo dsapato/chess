@@ -62,6 +62,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -93,45 +94,58 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">application.Game Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This is the manager of everything, including the Board, Players, and game loop.  
+ <a href="classapplication_1_1_game.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>OWNER</b></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Owner enumeration to specify who controls something, whether its a turn or square. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>STATE</b></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">State enumeration used to manage what stage the user is at. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a35f63ec92d69c27a46171e54477a4783"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35f63ec92d69c27a46171e54477a4783"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_game.html#a35f63ec92d69c27a46171e54477a4783">run</a> ()</td></tr>
+<tr class="memdesc:a35f63ec92d69c27a46171e54477a4783"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classapplication_1_1_game.html" title="This is the manager of everything, including the Board, Players, and game loop. ">Game</a> loop, updates and draws everything until closing. <br /></td></tr>
 <tr class="separator:a35f63ec92d69c27a46171e54477a4783"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a10619b2e871df9e6de819b032cbe1a4d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10619b2e871df9e6de819b032cbe1a4d"></a>
-static <a class="el" href="classapplication_1_1_map.html">Map</a>&#160;</td><td class="memItemRight" valign="bottom"><b>map</b></td></tr>
+static <a class="el" href="classapplication_1_1_map.html">Map</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_game.html#a10619b2e871df9e6de819b032cbe1a4d">map</a></td></tr>
+<tr class="memdesc:a10619b2e871df9e6de819b032cbe1a4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classapplication_1_1_map.html" title="Keeps track of location of Pieces and determines available moves. ">Map</a> we're playing on, this static reference allows all pieces to access the map easily. <br /></td></tr>
 <tr class="separator:a10619b2e871df9e6de819b032cbe1a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08866c12070f0ef544abd8b9f1b6b0e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08866c12070f0ef544abd8b9f1b6b0e5"></a>
-static <a class="el" href="classapplication_1_1_player.html">Player</a>&#160;</td><td class="memItemRight" valign="bottom"><b>playerOne</b></td></tr>
+static <a class="el" href="classapplication_1_1_player.html">Player</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_game.html#a08866c12070f0ef544abd8b9f1b6b0e5">playerOne</a></td></tr>
+<tr class="memdesc:a08866c12070f0ef544abd8b9f1b6b0e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static reference to player one, the player on the bottom of the screen, which is white. <br /></td></tr>
 <tr class="separator:a08866c12070f0ef544abd8b9f1b6b0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31fcad6171766180e0eef67f71253532"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31fcad6171766180e0eef67f71253532"></a>
-static <a class="el" href="classapplication_1_1_player.html">Player</a>&#160;</td><td class="memItemRight" valign="bottom"><b>playerTwo</b></td></tr>
+static <a class="el" href="classapplication_1_1_player.html">Player</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_game.html#a31fcad6171766180e0eef67f71253532">playerTwo</a></td></tr>
+<tr class="memdesc:a31fcad6171766180e0eef67f71253532"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classapplication_1_1_player.html" title="This keeps tracks of all Pieces, along with drawing and selection. ">Player</a> two, the top player, who is black. <br /></td></tr>
 <tr class="separator:a31fcad6171766180e0eef67f71253532"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb74b89e0a6424ebcd5c5c13bb569e0c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb74b89e0a6424ebcd5c5c13bb569e0c"></a>
-static STATE&#160;</td><td class="memItemRight" valign="bottom"><b>state</b></td></tr>
+static STATE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_game.html#adb74b89e0a6424ebcd5c5c13bb569e0c">state</a></td></tr>
+<tr class="memdesc:adb74b89e0a6424ebcd5c5c13bb569e0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">State of the game, holds what the player is doing. <br /></td></tr>
 <tr class="separator:adb74b89e0a6424ebcd5c5c13bb569e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad90cfa46ef32022357de71db5f1f7184"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad90cfa46ef32022357de71db5f1f7184"></a>
-static OWNER&#160;</td><td class="memItemRight" valign="bottom"><b>turn</b></td></tr>
+static OWNER&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classapplication_1_1_game.html#ad90cfa46ef32022357de71db5f1f7184">turn</a></td></tr>
+<tr class="memdesc:ad90cfa46ef32022357de71db5f1f7184"><td class="mdescLeft">&#160;</td><td class="mdescRight">Who's turn it is and can make a move. <br /></td></tr>
 <tr class="separator:ad90cfa46ef32022357de71db5f1f7184"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This is the manager of everything, including the Board, Players, and game loop. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/application/Game.java</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 15 2014 17:59:57 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 18 2014 11:43:41 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

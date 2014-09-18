@@ -3,20 +3,54 @@ package application;
 import java.awt.image.BufferedImage;
 import java.util.Vector;
 
+/**
+ * A superclass for all game pieces. Contains things like position, size, image, and moves.
+ */
 public class Piece {
+	/**
+	 * X Coordinate of where Piece is on the board
+	 */	
 	protected int xPos;
+	/**
+	 * Y Coordinate of where Piece is on the board
+	 */	
 	protected int yPos;
 	
+	/**
+	 * Width in pixels, used for drawing
+	 */	
 	protected int width;
+	/**
+	 * Height in pixels, used for drawing
+	 */	
 	protected int height;
 	
+	/**
+	 * Image, loaded by subclass, specific to type of Piece
+	 */	
 	protected BufferedImage img;
 	
+	/**
+	 * Vector expanded as needed to contain current possible moves to take
+	 */	
 	protected Vector<Pair> moves;
 	
+	/**
+	 * Which player controls the Piece
+	 */	
 	protected Game.OWNER owner;
+	
+	/**
+	 * True if the Piece has not moved yet at all
+	 */	
 	protected boolean firstMove;
 	
+	/**
+	 * Only constructor, simply sets internals to parameters and gathers some data from the Map
+	 * @param x Integer specifying the x position
+	 * @param y Integer specifying the y position
+	 * @param owner OWNER enumeration telling which player owns the Piece
+	 */	
 	public Piece(int x, int y, Game.OWNER owner){
 		this.xPos = x;
 		this.yPos = y;
@@ -30,15 +64,23 @@ public class Piece {
 		Game.map.setTileOwner(this.xPos, this.yPos, this.owner);
 	}
 
+	/**
+	 * Draws img at (xPos,yPos) of size width by height
+	 */	
 	public void draw(){
 		Zen.drawImage(img, xPos * width, Zen.getZenHeight() - ((yPos+1) * height), width, height);
 	}
 	
-	//Overridden function
+	/**
+	 * Populates moves, unique to subclass
+	 */	
 	public void getMoves(){
 		
 	}
 	
+	/**
+	 * Iterates through moves checking with Map to prove validity
+	 */	
 	protected void checkMoves(){
 		for(int i = 0; i < moves.size(); i++){
 			Pair move = moves.get(i);
@@ -55,6 +97,11 @@ public class Piece {
 		}
 	}
 	
+	/**
+	 * Moves the piece, clearing old spot and taking control of new one
+	 * @param x x-coordinate on map to move to
+	 * @param y y-coordinate on map to move to
+	 */	
 	public void moveTo(int x, int y){
 		firstMove = false;
 		
@@ -71,9 +118,17 @@ public class Piece {
 	
 	}
 	
+	/**
+	 * Getter of x-coordinate
+	 * @return x-coordinate on map of Piece
+	 */	
 	public int getX(){
 		return xPos;
 	}
+	/**
+	 * Getter of y-coordinate
+	 * @return y-coordinate on map of Piece
+	 */	
 	public int getY(){
 		return yPos;
 	}

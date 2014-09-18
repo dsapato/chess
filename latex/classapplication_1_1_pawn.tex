@@ -1,6 +1,11 @@
 \hypertarget{classapplication_1_1_pawn}{\section{application.\+Pawn Class Reference}
 \label{classapplication_1_1_pawn}\index{application.\+Pawn@{application.\+Pawn}}
 }
+
+
+A \hyperlink{classapplication_1_1_piece}{Piece} object, moves forward one or two space, attacks to the diagonal.  
+
+
 Inheritance diagram for application.\+Pawn\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,13 +15,40 @@ Inheritance diagram for application.\+Pawn\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classapplication_1_1_pawn_aa4d6c3a524dabd13c17a220bfd5db423}{{\bfseries Pawn} (int x, int y, Game.\+O\+W\+N\+E\+R owner)}\label{classapplication_1_1_pawn_aa4d6c3a524dabd13c17a220bfd5db423}
+\hyperlink{classapplication_1_1_pawn_aa4d6c3a524dabd13c17a220bfd5db423}{Pawn} (int x, int y, Game.\+O\+W\+N\+E\+R \hyperlink{classapplication_1_1_piece_a724f116bd99a66a6f6bcc8b7b35de131}{owner})
+\begin{DoxyCompactList}\small\item\em Only constructor, simply sets internals to parameters and gathers some data from the \hyperlink{classapplication_1_1_map}{Map}. \end{DoxyCompactList}\item 
+\hypertarget{classapplication_1_1_pawn_a0a43e16b2e2d80001617aeb0cd0ad440}{void \hyperlink{classapplication_1_1_pawn_a0a43e16b2e2d80001617aeb0cd0ad440}{get\+Moves} ()}\label{classapplication_1_1_pawn_a0a43e16b2e2d80001617aeb0cd0ad440}
 
-\item 
-\hypertarget{classapplication_1_1_pawn_a0a43e16b2e2d80001617aeb0cd0ad440}{void {\bfseries get\+Moves} ()}\label{classapplication_1_1_pawn_a0a43e16b2e2d80001617aeb0cd0ad440}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets all available moves from the \hyperlink{classapplication_1_1_map}{Map} and stores them internally. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A \hyperlink{classapplication_1_1_piece}{Piece} object, moves forward one or two space, attacks to the diagonal. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapplication_1_1_pawn_aa4d6c3a524dabd13c17a220bfd5db423}{\index{application\+::\+Pawn@{application\+::\+Pawn}!Pawn@{Pawn}}
+\index{Pawn@{Pawn}!application\+::\+Pawn@{application\+::\+Pawn}}
+\subsubsection[{Pawn}]{\setlength{\rightskip}{0pt plus 5cm}application.\+Pawn.\+Pawn (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{Game.\+O\+W\+N\+E\+R}]{owner}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapplication_1_1_pawn_aa4d6c3a524dabd13c17a220bfd5db423}
+
+
+Only constructor, simply sets internals to parameters and gathers some data from the \hyperlink{classapplication_1_1_map}{Map}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Integer specifying the x position \\
+\hline
+{\em y} & Integer specifying the y position \\
+\hline
+{\em owner} & O\+W\+N\+E\+R enumeration telling which player owns the \hyperlink{classapplication_1_1_piece}{Piece} \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

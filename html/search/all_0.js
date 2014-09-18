@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['bishop',['Bishop',['../classapplication_1_1_bishop.html',1,'application']]]
+  ['archbishop',['Archbishop',['../classapplication_1_1_archbishop.html',1,'application']]],
+  ['archbishop',['Archbishop',['../classapplication_1_1_archbishop.html#a7089f574b3b187b5f9cdbc97985796cd',1,'application::Archbishop']]]
 ];

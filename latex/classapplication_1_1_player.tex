@@ -1,30 +1,95 @@
 \hypertarget{classapplication_1_1_player}{\section{application.\+Player Class Reference}
 \label{classapplication_1_1_player}\index{application.\+Player@{application.\+Player}}
 }
+
+
+This keeps tracks of all Pieces, along with drawing and selection.  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classapplication_1_1_player_a14ac1e2c788fb22e7e5be4e5e6bc1847}{{\bfseries Player} (Game.\+O\+W\+N\+E\+R player\+Num)}\label{classapplication_1_1_player_a14ac1e2c788fb22e7e5be4e5e6bc1847}
+\hyperlink{classapplication_1_1_player_a14ac1e2c788fb22e7e5be4e5e6bc1847}{Player} (Game.\+O\+W\+N\+E\+R player\+Num)
+\begin{DoxyCompactList}\small\item\em Only constructor, adds pieces to board. \end{DoxyCompactList}\item 
+\hypertarget{classapplication_1_1_player_a0fd6b813c9a0ab1e9844d0c13d709a44}{void \hyperlink{classapplication_1_1_player_a0fd6b813c9a0ab1e9844d0c13d709a44}{draw\+Moves} ()}\label{classapplication_1_1_player_a0fd6b813c9a0ab1e9844d0c13d709a44}
 
-\item 
-\hypertarget{classapplication_1_1_player_a0fd6b813c9a0ab1e9844d0c13d709a44}{void {\bfseries draw\+Moves} ()}\label{classapplication_1_1_player_a0fd6b813c9a0ab1e9844d0c13d709a44}
+\begin{DoxyCompactList}\small\item\em Draw possible moves of selected piece. \end{DoxyCompactList}\item 
+\hypertarget{classapplication_1_1_player_ad598f6c101732c33ced27c1ec23b7080}{void \hyperlink{classapplication_1_1_player_ad598f6c101732c33ced27c1ec23b7080}{draw\+Pieces} ()}\label{classapplication_1_1_player_ad598f6c101732c33ced27c1ec23b7080}
 
-\item 
-\hypertarget{classapplication_1_1_player_ad598f6c101732c33ced27c1ec23b7080}{void {\bfseries draw\+Pieces} ()}\label{classapplication_1_1_player_ad598f6c101732c33ced27c1ec23b7080}
-
-\item 
-\hypertarget{classapplication_1_1_player_abc096ccded0197ea0a5a87e09b55507e}{void {\bfseries select} (int x, int y)}\label{classapplication_1_1_player_abc096ccded0197ea0a5a87e09b55507e}
-
-\item 
-\hypertarget{classapplication_1_1_player_a82638976ae19fce3c6e03b589938abaa}{void {\bfseries kill\+At} (int x, int y)}\label{classapplication_1_1_player_a82638976ae19fce3c6e03b589938abaa}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Draw pieces on board, calls draw function of each piece. \end{DoxyCompactList}\item 
+void \hyperlink{classapplication_1_1_player_abc096ccded0197ea0a5a87e09b55507e}{select} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Handle action of clicking at (x,y), depending on \hyperlink{classapplication_1_1_game}{Game} state and turn. \end{DoxyCompactList}\item 
+void \hyperlink{classapplication_1_1_player_a82638976ae19fce3c6e03b589938abaa}{kill\+At} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Removes \hyperlink{classapplication_1_1_piece}{Piece} at (x,y) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classapplication_1_1_player_ade2a529ac843368e351446cde7e6f76b}{Vector$<$ \hyperlink{classapplication_1_1_piece}{Piece} $>$ {\bfseries pieces}}\label{classapplication_1_1_player_ade2a529ac843368e351446cde7e6f76b}
+\hypertarget{classapplication_1_1_player_ade2a529ac843368e351446cde7e6f76b}{Vector$<$ \hyperlink{classapplication_1_1_piece}{Piece} $>$ \hyperlink{classapplication_1_1_player_ade2a529ac843368e351446cde7e6f76b}{pieces}}\label{classapplication_1_1_player_ade2a529ac843368e351446cde7e6f76b}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Vector which holds what Pieces the player owns. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This keeps tracks of all Pieces, along with drawing and selection. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapplication_1_1_player_a14ac1e2c788fb22e7e5be4e5e6bc1847}{\index{application\+::\+Player@{application\+::\+Player}!Player@{Player}}
+\index{Player@{Player}!application\+::\+Player@{application\+::\+Player}}
+\subsubsection[{Player}]{\setlength{\rightskip}{0pt plus 5cm}application.\+Player.\+Player (
+\begin{DoxyParamCaption}
+\item[{Game.\+O\+W\+N\+E\+R}]{player\+Num}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapplication_1_1_player_a14ac1e2c788fb22e7e5be4e5e6bc1847}
+
+
+Only constructor, adds pieces to board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Num} & Which player this is, to set ownership of pieces \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapplication_1_1_player_a82638976ae19fce3c6e03b589938abaa}{\index{application\+::\+Player@{application\+::\+Player}!kill\+At@{kill\+At}}
+\index{kill\+At@{kill\+At}!application\+::\+Player@{application\+::\+Player}}
+\subsubsection[{kill\+At}]{\setlength{\rightskip}{0pt plus 5cm}void application.\+Player.\+kill\+At (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapplication_1_1_player_a82638976ae19fce3c6e03b589938abaa}
+
+
+Removes \hyperlink{classapplication_1_1_piece}{Piece} at (x,y) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x-\/coordinate to remove \hyperlink{classapplication_1_1_piece}{Piece} from \\
+\hline
+{\em y} & y-\/coordinate to remove \hyperlink{classapplication_1_1_piece}{Piece} from \\
+\hline
+\end{DoxyParams}
+\hypertarget{classapplication_1_1_player_abc096ccded0197ea0a5a87e09b55507e}{\index{application\+::\+Player@{application\+::\+Player}!select@{select}}
+\index{select@{select}!application\+::\+Player@{application\+::\+Player}}
+\subsubsection[{select}]{\setlength{\rightskip}{0pt plus 5cm}void application.\+Player.\+select (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapplication_1_1_player_abc096ccded0197ea0a5a87e09b55507e}
+
+
+Handle action of clicking at (x,y), depending on \hyperlink{classapplication_1_1_game}{Game} state and turn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x-\/coordinate on \hyperlink{classapplication_1_1_map}{Map} \\
+\hline
+{\em y} & y-\/coordinate on \hyperlink{classapplication_1_1_map}{Map} \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

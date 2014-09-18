@@ -4,9 +4,16 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+/**
+ * JUnit Tests to check various functionality
+ * @author Danny Sapato
+ *
+ */
 public class TestPieces {
 
-	//Tests constructor of a new game piece, also checks movement of pieces
+	/**
+	 * Tests constructor of a new game piece, also checks movement of pieces
+	 */
 	@Test
 	public void testNewPieceAndMovement() {
 		Game g = new Game();
@@ -22,7 +29,9 @@ public class TestPieces {
 		assertEquals(3, piece.getY());
 	}
 	
-	//Makes sure that a new pawn can move one or two blocks ahead
+	/**
+	 * Makes sure that a new pawn can move one or two blocks ahead
+	 */
 	@Test
 	public void testPawn() {
 		Game g = new Game();
@@ -34,7 +43,9 @@ public class TestPieces {
 		assertEquals(4, piece.moves.get(1).y);
 	}
 	
-	//Tests creation of maps, including row getting and bound checking
+	/**
+	 * Tests creation of maps, including row getting and bound checking
+	 */
 	@Test
 	public void testMap() {
 		Game g = new Game();

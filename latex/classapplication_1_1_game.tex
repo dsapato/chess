@@ -1,38 +1,46 @@
 \hypertarget{classapplication_1_1_game}{\section{application.\+Game Class Reference}
 \label{classapplication_1_1_game}\index{application.\+Game@{application.\+Game}}
 }
+
+
+This is the manager of everything, including the Board, Players, and game loop.  
+
+
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 enum {\bfseries O\+W\+N\+E\+R}
-\item 
+\begin{DoxyCompactList}\small\item\em Owner enumeration to specify who controls something, whether its a turn or square. \end{DoxyCompactList}\item 
 enum {\bfseries S\+T\+A\+T\+E}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em State enumeration used to manage what stage the user is at. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classapplication_1_1_game_a35f63ec92d69c27a46171e54477a4783}{void {\bfseries run} ()}\label{classapplication_1_1_game_a35f63ec92d69c27a46171e54477a4783}
+\hypertarget{classapplication_1_1_game_a35f63ec92d69c27a46171e54477a4783}{void \hyperlink{classapplication_1_1_game_a35f63ec92d69c27a46171e54477a4783}{run} ()}\label{classapplication_1_1_game_a35f63ec92d69c27a46171e54477a4783}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classapplication_1_1_game}{Game} loop, updates and draws everything until closing. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classapplication_1_1_game_a10619b2e871df9e6de819b032cbe1a4d}{static \hyperlink{classapplication_1_1_map}{Map} {\bfseries map}}\label{classapplication_1_1_game_a10619b2e871df9e6de819b032cbe1a4d}
+\hypertarget{classapplication_1_1_game_a10619b2e871df9e6de819b032cbe1a4d}{static \hyperlink{classapplication_1_1_map}{Map} \hyperlink{classapplication_1_1_game_a10619b2e871df9e6de819b032cbe1a4d}{map}}\label{classapplication_1_1_game_a10619b2e871df9e6de819b032cbe1a4d}
 
-\item 
-\hypertarget{classapplication_1_1_game_a08866c12070f0ef544abd8b9f1b6b0e5}{static \hyperlink{classapplication_1_1_player}{Player} {\bfseries player\+One}}\label{classapplication_1_1_game_a08866c12070f0ef544abd8b9f1b6b0e5}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{classapplication_1_1_map}{Map} we're playing on, this static reference allows all pieces to access the map easily. \end{DoxyCompactList}\item 
+\hypertarget{classapplication_1_1_game_a08866c12070f0ef544abd8b9f1b6b0e5}{static \hyperlink{classapplication_1_1_player}{Player} \hyperlink{classapplication_1_1_game_a08866c12070f0ef544abd8b9f1b6b0e5}{player\+One}}\label{classapplication_1_1_game_a08866c12070f0ef544abd8b9f1b6b0e5}
 
-\item 
-\hypertarget{classapplication_1_1_game_a31fcad6171766180e0eef67f71253532}{static \hyperlink{classapplication_1_1_player}{Player} {\bfseries player\+Two}}\label{classapplication_1_1_game_a31fcad6171766180e0eef67f71253532}
+\begin{DoxyCompactList}\small\item\em Static reference to player one, the player on the bottom of the screen, which is white. \end{DoxyCompactList}\item 
+\hypertarget{classapplication_1_1_game_a31fcad6171766180e0eef67f71253532}{static \hyperlink{classapplication_1_1_player}{Player} \hyperlink{classapplication_1_1_game_a31fcad6171766180e0eef67f71253532}{player\+Two}}\label{classapplication_1_1_game_a31fcad6171766180e0eef67f71253532}
 
-\item 
-\hypertarget{classapplication_1_1_game_adb74b89e0a6424ebcd5c5c13bb569e0c}{static S\+T\+A\+T\+E {\bfseries state}}\label{classapplication_1_1_game_adb74b89e0a6424ebcd5c5c13bb569e0c}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classapplication_1_1_player}{Player} two, the top player, who is black. \end{DoxyCompactList}\item 
+\hypertarget{classapplication_1_1_game_adb74b89e0a6424ebcd5c5c13bb569e0c}{static S\+T\+A\+T\+E \hyperlink{classapplication_1_1_game_adb74b89e0a6424ebcd5c5c13bb569e0c}{state}}\label{classapplication_1_1_game_adb74b89e0a6424ebcd5c5c13bb569e0c}
 
-\item 
-\hypertarget{classapplication_1_1_game_ad90cfa46ef32022357de71db5f1f7184}{static O\+W\+N\+E\+R {\bfseries turn}}\label{classapplication_1_1_game_ad90cfa46ef32022357de71db5f1f7184}
+\begin{DoxyCompactList}\small\item\em State of the game, holds what the player is doing. \end{DoxyCompactList}\item 
+\hypertarget{classapplication_1_1_game_ad90cfa46ef32022357de71db5f1f7184}{static O\+W\+N\+E\+R \hyperlink{classapplication_1_1_game_ad90cfa46ef32022357de71db5f1f7184}{turn}}\label{classapplication_1_1_game_ad90cfa46ef32022357de71db5f1f7184}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Who's turn it is and can make a move. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+This is the manager of everything, including the Board, Players, and game loop. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

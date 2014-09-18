@@ -1,66 +1,147 @@
 \hypertarget{classapplication_1_1_piece}{\section{application.\+Piece Class Reference}
 \label{classapplication_1_1_piece}\index{application.\+Piece@{application.\+Piece}}
 }
+
+
+A superclass for all game pieces.  
+
+
 Inheritance diagram for application.\+Piece\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=1.517615cm]{classapplication_1_1_piece}
+\includegraphics[height=9.000000cm]{classapplication_1_1_piece}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classapplication_1_1_piece_a7845605267af2d616efc66af07d175ea}{{\bfseries Piece} (int x, int y, Game.\+O\+W\+N\+E\+R owner)}\label{classapplication_1_1_piece_a7845605267af2d616efc66af07d175ea}
+\hyperlink{classapplication_1_1_piece_a7845605267af2d616efc66af07d175ea}{Piece} (int x, int y, Game.\+O\+W\+N\+E\+R \hyperlink{classapplication_1_1_piece_a724f116bd99a66a6f6bcc8b7b35de131}{owner})
+\begin{DoxyCompactList}\small\item\em Only constructor, simply sets internals to parameters and gathers some data from the \hyperlink{classapplication_1_1_map}{Map}. \end{DoxyCompactList}\item 
+\hypertarget{classapplication_1_1_piece_ae4bdd8cfc85f889c8d7dc840a137cd65}{void \hyperlink{classapplication_1_1_piece_ae4bdd8cfc85f889c8d7dc840a137cd65}{draw} ()}\label{classapplication_1_1_piece_ae4bdd8cfc85f889c8d7dc840a137cd65}
 
-\item 
-\hypertarget{classapplication_1_1_piece_ae4bdd8cfc85f889c8d7dc840a137cd65}{void {\bfseries draw} ()}\label{classapplication_1_1_piece_ae4bdd8cfc85f889c8d7dc840a137cd65}
+\begin{DoxyCompactList}\small\item\em Draws img at (x\+Pos,y\+Pos) of size width by height. \end{DoxyCompactList}\item 
+\hypertarget{classapplication_1_1_piece_acca039f617b0bf259eb1e1d00fbf4cda}{void \hyperlink{classapplication_1_1_piece_acca039f617b0bf259eb1e1d00fbf4cda}{get\+Moves} ()}\label{classapplication_1_1_piece_acca039f617b0bf259eb1e1d00fbf4cda}
 
-\item 
-\hypertarget{classapplication_1_1_piece_acca039f617b0bf259eb1e1d00fbf4cda}{void {\bfseries get\+Moves} ()}\label{classapplication_1_1_piece_acca039f617b0bf259eb1e1d00fbf4cda}
-
-\item 
-\hypertarget{classapplication_1_1_piece_ac91b28148a2b0e38edeba7a42501d99f}{void {\bfseries move\+To} (int x, int y)}\label{classapplication_1_1_piece_ac91b28148a2b0e38edeba7a42501d99f}
-
-\item 
-\hypertarget{classapplication_1_1_piece_a2e58a2e63e94dd3de909e2fd55a7b819}{int {\bfseries get\+X} ()}\label{classapplication_1_1_piece_a2e58a2e63e94dd3de909e2fd55a7b819}
-
-\item 
-\hypertarget{classapplication_1_1_piece_a360e6e106c1254e4b86e69143ca0ce72}{int {\bfseries get\+Y} ()}\label{classapplication_1_1_piece_a360e6e106c1254e4b86e69143ca0ce72}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Populates moves, unique to subclass. \end{DoxyCompactList}\item 
+void \hyperlink{classapplication_1_1_piece_ac91b28148a2b0e38edeba7a42501d99f}{move\+To} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Moves the piece, clearing old spot and taking control of new one. \end{DoxyCompactList}\item 
+int \hyperlink{classapplication_1_1_piece_a2e58a2e63e94dd3de909e2fd55a7b819}{get\+X} ()
+\begin{DoxyCompactList}\small\item\em Getter of x-\/coordinate. \end{DoxyCompactList}\item 
+int \hyperlink{classapplication_1_1_piece_a360e6e106c1254e4b86e69143ca0ce72}{get\+Y} ()
+\begin{DoxyCompactList}\small\item\em Getter of y-\/coordinate. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classapplication_1_1_piece_a70d0ea8dfe2d8ebaf1af52f3468cf972}{void {\bfseries check\+Moves} ()}\label{classapplication_1_1_piece_a70d0ea8dfe2d8ebaf1af52f3468cf972}
+\hypertarget{classapplication_1_1_piece_a70d0ea8dfe2d8ebaf1af52f3468cf972}{void \hyperlink{classapplication_1_1_piece_a70d0ea8dfe2d8ebaf1af52f3468cf972}{check\+Moves} ()}\label{classapplication_1_1_piece_a70d0ea8dfe2d8ebaf1af52f3468cf972}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Iterates through moves checking with \hyperlink{classapplication_1_1_map}{Map} to prove validity. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classapplication_1_1_piece_af7a78ee6a0bbbee54b0bf385ab3eda43}{int {\bfseries x\+Pos}}\label{classapplication_1_1_piece_af7a78ee6a0bbbee54b0bf385ab3eda43}
+\hypertarget{classapplication_1_1_piece_af7a78ee6a0bbbee54b0bf385ab3eda43}{int \hyperlink{classapplication_1_1_piece_af7a78ee6a0bbbee54b0bf385ab3eda43}{x\+Pos}}\label{classapplication_1_1_piece_af7a78ee6a0bbbee54b0bf385ab3eda43}
 
-\item 
-\hypertarget{classapplication_1_1_piece_a11da2d0872e6553217daa56a851c7740}{int {\bfseries y\+Pos}}\label{classapplication_1_1_piece_a11da2d0872e6553217daa56a851c7740}
+\begin{DoxyCompactList}\small\item\em X Coordinate of where \hyperlink{classapplication_1_1_piece}{Piece} is on the board. \end{DoxyCompactList}\item 
+\hypertarget{classapplication_1_1_piece_a11da2d0872e6553217daa56a851c7740}{int \hyperlink{classapplication_1_1_piece_a11da2d0872e6553217daa56a851c7740}{y\+Pos}}\label{classapplication_1_1_piece_a11da2d0872e6553217daa56a851c7740}
 
-\item 
-\hypertarget{classapplication_1_1_piece_a8885ca50301c6e85d333f397ad106a6b}{int {\bfseries width}}\label{classapplication_1_1_piece_a8885ca50301c6e85d333f397ad106a6b}
+\begin{DoxyCompactList}\small\item\em Y Coordinate of where \hyperlink{classapplication_1_1_piece}{Piece} is on the board. \end{DoxyCompactList}\item 
+\hypertarget{classapplication_1_1_piece_a8885ca50301c6e85d333f397ad106a6b}{int \hyperlink{classapplication_1_1_piece_a8885ca50301c6e85d333f397ad106a6b}{width}}\label{classapplication_1_1_piece_a8885ca50301c6e85d333f397ad106a6b}
 
-\item 
-\hypertarget{classapplication_1_1_piece_af7f74a095a34bf775cc6b44e5ea1dcbe}{int {\bfseries height}}\label{classapplication_1_1_piece_af7f74a095a34bf775cc6b44e5ea1dcbe}
+\begin{DoxyCompactList}\small\item\em Width in pixels, used for drawing. \end{DoxyCompactList}\item 
+\hypertarget{classapplication_1_1_piece_af7f74a095a34bf775cc6b44e5ea1dcbe}{int \hyperlink{classapplication_1_1_piece_af7f74a095a34bf775cc6b44e5ea1dcbe}{height}}\label{classapplication_1_1_piece_af7f74a095a34bf775cc6b44e5ea1dcbe}
 
-\item 
-\hypertarget{classapplication_1_1_piece_a423e3460410ce4199060a42812c79463}{Buffered\+Image {\bfseries img}}\label{classapplication_1_1_piece_a423e3460410ce4199060a42812c79463}
+\begin{DoxyCompactList}\small\item\em Height in pixels, used for drawing. \end{DoxyCompactList}\item 
+\hypertarget{classapplication_1_1_piece_a423e3460410ce4199060a42812c79463}{Buffered\+Image \hyperlink{classapplication_1_1_piece_a423e3460410ce4199060a42812c79463}{img}}\label{classapplication_1_1_piece_a423e3460410ce4199060a42812c79463}
 
-\item 
-\hypertarget{classapplication_1_1_piece_a9e704a1ebc750f4a5f1c640f1cc927f4}{Vector$<$ \hyperlink{classapplication_1_1_pair}{Pair} $>$ {\bfseries moves}}\label{classapplication_1_1_piece_a9e704a1ebc750f4a5f1c640f1cc927f4}
+\begin{DoxyCompactList}\small\item\em Image, loaded by subclass, specific to type of \hyperlink{classapplication_1_1_piece}{Piece}. \end{DoxyCompactList}\item 
+\hypertarget{classapplication_1_1_piece_a9e704a1ebc750f4a5f1c640f1cc927f4}{Vector$<$ \hyperlink{classapplication_1_1_pair}{Pair} $>$ \hyperlink{classapplication_1_1_piece_a9e704a1ebc750f4a5f1c640f1cc927f4}{moves}}\label{classapplication_1_1_piece_a9e704a1ebc750f4a5f1c640f1cc927f4}
 
-\item 
-\hypertarget{classapplication_1_1_piece_a724f116bd99a66a6f6bcc8b7b35de131}{Game.\+O\+W\+N\+E\+R {\bfseries owner}}\label{classapplication_1_1_piece_a724f116bd99a66a6f6bcc8b7b35de131}
+\begin{DoxyCompactList}\small\item\em Vector expanded as needed to contain current possible moves to take. \end{DoxyCompactList}\item 
+\hypertarget{classapplication_1_1_piece_a724f116bd99a66a6f6bcc8b7b35de131}{Game.\+O\+W\+N\+E\+R \hyperlink{classapplication_1_1_piece_a724f116bd99a66a6f6bcc8b7b35de131}{owner}}\label{classapplication_1_1_piece_a724f116bd99a66a6f6bcc8b7b35de131}
 
-\item 
-\hypertarget{classapplication_1_1_piece_a8610c3152130255360304aabb534e7cb}{boolean {\bfseries first\+Move}}\label{classapplication_1_1_piece_a8610c3152130255360304aabb534e7cb}
+\begin{DoxyCompactList}\small\item\em Which player controls the \hyperlink{classapplication_1_1_piece}{Piece}. \end{DoxyCompactList}\item 
+\hypertarget{classapplication_1_1_piece_a8610c3152130255360304aabb534e7cb}{boolean \hyperlink{classapplication_1_1_piece_a8610c3152130255360304aabb534e7cb}{first\+Move}}\label{classapplication_1_1_piece_a8610c3152130255360304aabb534e7cb}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em True if the \hyperlink{classapplication_1_1_piece}{Piece} has not moved yet at all. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A superclass for all game pieces. 
+
+Contains things like position, size, image, and moves. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapplication_1_1_piece_a7845605267af2d616efc66af07d175ea}{\index{application\+::\+Piece@{application\+::\+Piece}!Piece@{Piece}}
+\index{Piece@{Piece}!application\+::\+Piece@{application\+::\+Piece}}
+\subsubsection[{Piece}]{\setlength{\rightskip}{0pt plus 5cm}application.\+Piece.\+Piece (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{Game.\+O\+W\+N\+E\+R}]{owner}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapplication_1_1_piece_a7845605267af2d616efc66af07d175ea}
+
+
+Only constructor, simply sets internals to parameters and gathers some data from the \hyperlink{classapplication_1_1_map}{Map}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Integer specifying the x position \\
+\hline
+{\em y} & Integer specifying the y position \\
+\hline
+{\em owner} & O\+W\+N\+E\+R enumeration telling which player owns the \hyperlink{classapplication_1_1_piece}{Piece} \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapplication_1_1_piece_a2e58a2e63e94dd3de909e2fd55a7b819}{\index{application\+::\+Piece@{application\+::\+Piece}!get\+X@{get\+X}}
+\index{get\+X@{get\+X}!application\+::\+Piece@{application\+::\+Piece}}
+\subsubsection[{get\+X}]{\setlength{\rightskip}{0pt plus 5cm}int application.\+Piece.\+get\+X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapplication_1_1_piece_a2e58a2e63e94dd3de909e2fd55a7b819}
+
+
+Getter of x-\/coordinate. 
+
+\begin{DoxyReturn}{Returns}
+x-\/coordinate on map of \hyperlink{classapplication_1_1_piece}{Piece} 
+\end{DoxyReturn}
+\hypertarget{classapplication_1_1_piece_a360e6e106c1254e4b86e69143ca0ce72}{\index{application\+::\+Piece@{application\+::\+Piece}!get\+Y@{get\+Y}}
+\index{get\+Y@{get\+Y}!application\+::\+Piece@{application\+::\+Piece}}
+\subsubsection[{get\+Y}]{\setlength{\rightskip}{0pt plus 5cm}int application.\+Piece.\+get\+Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapplication_1_1_piece_a360e6e106c1254e4b86e69143ca0ce72}
+
+
+Getter of y-\/coordinate. 
+
+\begin{DoxyReturn}{Returns}
+y-\/coordinate on map of \hyperlink{classapplication_1_1_piece}{Piece} 
+\end{DoxyReturn}
+\hypertarget{classapplication_1_1_piece_ac91b28148a2b0e38edeba7a42501d99f}{\index{application\+::\+Piece@{application\+::\+Piece}!move\+To@{move\+To}}
+\index{move\+To@{move\+To}!application\+::\+Piece@{application\+::\+Piece}}
+\subsubsection[{move\+To}]{\setlength{\rightskip}{0pt plus 5cm}void application.\+Piece.\+move\+To (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapplication_1_1_piece_ac91b28148a2b0e38edeba7a42501d99f}
+
+
+Moves the piece, clearing old spot and taking control of new one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x-\/coordinate on map to move to \\
+\hline
+{\em y} & y-\/coordinate on map to move to \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

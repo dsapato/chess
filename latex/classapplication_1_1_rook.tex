@@ -1,6 +1,11 @@
 \hypertarget{classapplication_1_1_rook}{\section{application.\+Rook Class Reference}
 \label{classapplication_1_1_rook}\index{application.\+Rook@{application.\+Rook}}
 }
+
+
+A \hyperlink{classapplication_1_1_piece}{Piece} object, moves across rows and columns.  
+
+
 Inheritance diagram for application.\+Rook\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,13 +15,40 @@ Inheritance diagram for application.\+Rook\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classapplication_1_1_rook_a748877f5e1bfca7a705a19b1832c5629}{{\bfseries Rook} (int x, int y, Game.\+O\+W\+N\+E\+R owner)}\label{classapplication_1_1_rook_a748877f5e1bfca7a705a19b1832c5629}
+\hyperlink{classapplication_1_1_rook_a748877f5e1bfca7a705a19b1832c5629}{Rook} (int x, int y, Game.\+O\+W\+N\+E\+R \hyperlink{classapplication_1_1_piece_a724f116bd99a66a6f6bcc8b7b35de131}{owner})
+\begin{DoxyCompactList}\small\item\em Only constructor, simply sets internals to parameters and gathers some data from the \hyperlink{classapplication_1_1_map}{Map}. \end{DoxyCompactList}\item 
+\hypertarget{classapplication_1_1_rook_a3a2f760f2cc7d5ee583df33b3b11ccd0}{void \hyperlink{classapplication_1_1_rook_a3a2f760f2cc7d5ee583df33b3b11ccd0}{get\+Moves} ()}\label{classapplication_1_1_rook_a3a2f760f2cc7d5ee583df33b3b11ccd0}
 
-\item 
-\hypertarget{classapplication_1_1_rook_a3a2f760f2cc7d5ee583df33b3b11ccd0}{void {\bfseries get\+Moves} ()}\label{classapplication_1_1_rook_a3a2f760f2cc7d5ee583df33b3b11ccd0}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets all available moves from the \hyperlink{classapplication_1_1_map}{Map} and stores them internally. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A \hyperlink{classapplication_1_1_piece}{Piece} object, moves across rows and columns. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapplication_1_1_rook_a748877f5e1bfca7a705a19b1832c5629}{\index{application\+::\+Rook@{application\+::\+Rook}!Rook@{Rook}}
+\index{Rook@{Rook}!application\+::\+Rook@{application\+::\+Rook}}
+\subsubsection[{Rook}]{\setlength{\rightskip}{0pt plus 5cm}application.\+Rook.\+Rook (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{Game.\+O\+W\+N\+E\+R}]{owner}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapplication_1_1_rook_a748877f5e1bfca7a705a19b1832c5629}
+
+
+Only constructor, simply sets internals to parameters and gathers some data from the \hyperlink{classapplication_1_1_map}{Map}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Integer specifying the x position \\
+\hline
+{\em y} & Integer specifying the y position \\
+\hline
+{\em owner} & O\+W\+N\+E\+R enumeration telling which player owns the \hyperlink{classapplication_1_1_piece}{Piece} \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

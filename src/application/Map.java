@@ -2,7 +2,9 @@ package application;
 
 import java.util.Vector;
 
-
+/**
+ * Keeps track of location of Pieces and determines available moves
+ */
 public class Map {
 	private final int SIZE = 12;
 	
@@ -14,7 +16,9 @@ public class Map {
 	private MapTile[][] mapTiles;
 
 	
-	//Constructor
+	/**
+	 * Only constructor, creates SIZE by SIZE square of tiles
+	 */	
 	public Map(){
 		mapTiles = new MapTile[SIZE][SIZE];
 		for(int x = 0; x < SIZE; x++){
@@ -24,10 +28,9 @@ public class Map {
 		}
 	}
 	
-	public void update(){
-
-	}
-	
+	/**
+	 * Draws the squares of the board
+	 */	
 	public void draw(){
 		for(int x = 0; x < SIZE; x++){
 			for(int y = 0; y < SIZE; y++){
@@ -43,7 +46,14 @@ public class Map {
 		}
 	}
 	
-	//Return Vector of the positions of tiles in that row
+	
+	/**
+	 * Return Vector of the positions of tiles in that row
+	 * @param x x-coordinate to start search from
+	 * @param y y-coordinate to start search from
+	 * @param owner Who owns the Piece that wants this information
+	 * @return Positions of all of the moves possible
+	 */
 	public Vector<Pair> getRowPositionsAt(int x, int y, Game.OWNER owner){
 		Vector<Pair> ret = new Vector<Pair>();
 		//Square from 0 to SIZE-1
@@ -68,7 +78,13 @@ public class Map {
 		return ret;
 	}
 	
-	//Return Vector of the positions of tiles in that column
+	/**
+	 * Return Vector of the positions of tiles in that column
+	 * @param x x-coordinate to start search from
+	 * @param y y-coordinate to start search from
+	 * @param owner Who owns the Piece that wants this information
+	 * @return Positions of all of the moves possible
+	 */
 	public Vector<Pair> getColumnPositionsAt(int x, int y, Game.OWNER owner){
 		Vector<Pair> ret = new Vector<Pair>();
 		//Square from 0 to SIZE-1
@@ -93,7 +109,13 @@ public class Map {
 		return ret;
 	}
 	
-	//Return Vector of the positions of tiles in that diagonal, bottom left to top right
+	/**
+	 * Return Vector of the positions of tiles in that diagonal, bottom left to top right
+	 * @param x x-coordinate to start search from
+	 * @param y y-coordinate to start search from
+	 * @param owner Who owns the Piece that wants this information
+	 * @return Positions of all of the moves possible
+	 */
 	public Vector<Pair> getDiagonalBLtoTR(int x, int y, Game.OWNER owner){
 		Vector<Pair> ret = new Vector<Pair>();
 		
@@ -130,7 +152,13 @@ public class Map {
 		return ret;
 	}
 	
-	//Return Vector of the positions of tiles in that diagonal, top left to bottom right
+	/**
+	 * 	Return Vector of the positions of tiles in that diagonal, top left to bottom right
+	 * @param x x-coordinate to start search from
+	 * @param y y-coordinate to start search from
+	 * @param owner Who owns the Piece that wants this information
+	 * @return Positions of all of the moves possible
+	 */
 	public Vector<Pair> getDiagonalTLtoBR(int x, int y, Game.OWNER owner){
 		Vector<Pair> ret = new Vector<Pair>();
 		
@@ -167,10 +195,22 @@ public class Map {
 		return ret;
 	}
 	
+	/**
+	 * Checks if the specified position is a valid spot
+	 * @param x x-coordinate to check
+	 * @param y y-coordinate to check
+	 * @return true is valid spot, false otherwise
+	 */
 	public boolean inBounds(int x, int y){
 		return x >= 0 && y >= 0 && x < SIZE && y < SIZE;
 	}
 	
+	/**
+	 * Checks if the tile has a Piece on it
+	 * @param x x-coordinate to check
+	 * @param y y-coordinate to check
+	 * @return true if tile has Piece, false otherwise
+	 */
 	public boolean checkTileOccupied(int x, int y){
 		if(mapTiles[x][y].owner == Game.OWNER.NONE){//Open tile, not occupied
 			return false;
@@ -178,27 +218,54 @@ public class Map {
 		return true;
 	}
 	
+	/**
+	 * Checks if the tile has an enemy Piece on it
+	 * @param x x-coordinate to check
+	 * @param y y-coordinate to check
+	 * @return true if tile has enemy Piece, false otherwise
+	 */
 	public boolean checkTileEnemy(int x, int y, Game.OWNER owner){
 		return mapTiles[x][y].owner != Game.OWNER.NONE && mapTiles[x][y].owner != owner;
 	}
 	
-	
+	/**
+	 * Getter of number of MapTiles wide the map is
+	 * @return number of MapTiles in a map row
+	 */
 	public int getWidth(){
 		return SIZE;
 	}
 	
+	/**
+	 * Getter of number of MapTiles tall the map is
+	 * @return number of MapTiles in a map column
+	 */
 	public int getHeight(){
 		return SIZE;
 	}
 	
+	/**
+	 * Getter of tile width
+	 * @return Pixels in width of tile
+	 */
 	public int getTileWidth(){
 		return TILESIZE;
 	}
 	
+	/**
+	 * Getter of tile height
+	 * @return Pixels in height of tile
+	 */
 	public int getTileHeight(){
 		return TILESIZE;
 	}
 	
+	/**
+	 * Setter of tile ownership
+	 * @param x x-coordinate of tile to set
+	 * @param y y-coordinate of tile to set
+	 * @param owner Who to own the tile
+	 */
 	public void setTileOwner(int x, int y, Game.OWNER owner){
 		if(x >= 0 && y >= 0 && x < SIZE && y < SIZE){
 			//Check for killing other piece
