@@ -8,10 +8,10 @@ import java.util.Vector;
 public class Map {
 	private final int SIZE = 12;
 	
-	private int TILESIZE = Zen.getZenWidth()/SIZE; 
+	private int TILESIZE = Game.BOARD_WIDTH/SIZE; 
 	
 	//Draw offset fixes a gap being drawn if the screen size isn't a multiple of SIZE
-	private int drawOffset = Zen.getZenWidth() -  (Zen.getZenWidth()/SIZE*SIZE);
+	private int drawOffset = Game.BOARD_WIDTH -  (Game.BOARD_WIDTH/SIZE*SIZE);
 	
 	private MapTile[][] mapTiles;
 

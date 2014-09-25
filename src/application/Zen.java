@@ -79,7 +79,7 @@ import javax.swing.SwingUtilities;
 @SuppressWarnings("serial")
 public class Zen extends JApplet {
 	
-	public static final Dimension DEFAULT_SIZE = new Dimension(640, 640);	//Danny Sapato 1366,768
+	public static final Dimension DEFAULT_SIZE = new Dimension(840, 640);	//Danny Sapato 1366,768
 	public static final String DEFAULT_OPTIONS = "";
 	protected static final boolean VERBOSE = false;
 

@@ -166,14 +166,7 @@ public class Player {
 				Pair move = currPiece.moves.get(i);
 				if(move.x == x && move.y == y){
 					currPiece.moveTo(x, y);
-					//Change turn
-					if(Game.turn == OWNER.PLAYER_ONE){
-						Game.turn = OWNER.PLAYER_TWO;
-					}
-					else if(Game.turn == OWNER.PLAYER_TWO){
-						Game.turn = OWNER.PLAYER_ONE;
-					}
-					Game.state = STATE.SELECTING;
+					Game.switchTurn();
 					return;
 				}
 			}
@@ -189,7 +182,8 @@ public class Player {
 	public void killAt(int x, int y){
 		for(int i = 0; i < pieces.size(); i++){
 			if(pieces.get(i).getX() == x && pieces.get(i).getY() == y){
-				pieces.remove(i);
+				pieces.get(i).xPos = -1;//Just place off of map in case we undo and bring the piece back
+				pieces.get(i).yPos = -1;
 				return;
 			}
 		}

@@ -17,7 +17,7 @@ public class Game {
 	 * State enumeration used to manage what stage the user is at
 	 */
 	public static enum STATE {
-		SELECTING, MOVING
+		SELECTING, MOVING, NEW_GAME_PROMPT
 	}
 
 	/**
@@ -45,22 +45,47 @@ public class Game {
 	 */	
 	public static OWNER turn;
 	
-	private boolean mouseReleased;
+	private static boolean mouseReleased;
 	
+	/**
+	 * Pair that represents matches won, (player one score, player two score)
+	 */
+	public static Pair score;
 	
+	/**
+	 * Number of tied games
+	 */
+	public static int ties;
 	
+	/**
+	 * Constant value of board width
+	 */
+	public final static int BOARD_WIDTH = 640;
+	
+	/**
+	 * Constant value of board height
+	 */
+	public final static int BOARD_HEIGHT = 640;
+	
+	private static ControlPanel controlPanel;
 	
 	/**
 	 * The only constructor, creates Map, Players, and sets State
 	 */
 	Game(){
+		newGame();
+		score = new Pair(0,0);
+		ties = 0;
+		controlPanel = new ControlPanel();
+	}
+	
+	public static void newGame(){
 		map = new Map();
 		playerOne = new Player(OWNER.PLAYER_ONE);
 		playerTwo = new Player(OWNER.PLAYER_TWO);
 		state = STATE.SELECTING;
 		turn = OWNER.PLAYER_ONE;
-		mouseReleased = false;
-	
+		mouseReleased = false;		
 	}
 
 	/**
@@ -77,6 +102,8 @@ public class Game {
 	 * Update, calls appropriate update function of all objects
 	 */
 	private void update(){
+		controlPanel.update();
+		
 		checkKeys();
 		checkMouse();
 	}
@@ -90,6 +117,7 @@ public class Game {
 		playerTwo.drawMoves();
 		playerOne.drawPieces();
 		playerTwo.drawPieces();
+		controlPanel.draw();
 		
 		Zen.flipBuffer();
 	}
@@ -134,5 +162,23 @@ public class Game {
 		else if(turn == OWNER.PLAYER_TWO){
 			playerTwo.select(boardX, boardY);
 		}
+	}
+	
+	/**
+	 * Undoes last move made
+	 */
+	public static void undoMove(){
+		switchTurn();
+	}
+	
+	public static void switchTurn(){
+		//Change turn
+		if(turn == OWNER.PLAYER_ONE){
+			turn = OWNER.PLAYER_TWO;
+		}
+		else if(Game.turn == OWNER.PLAYER_TWO){
+			turn = OWNER.PLAYER_ONE;
+		}
+		state = STATE.SELECTING;
 	}
 }
