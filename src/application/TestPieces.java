@@ -49,15 +49,59 @@ public class TestPieces {
 	@Test
 	public void testMap() {
 		Game g = new Game();
+		Game.newGame();
 		
 		Map map = new Map();
-		assertEquals(7, map.getRowPositionsAt(4, 4, Game.OWNER.PLAYER_ONE).size());//8 spots per row, minus the tile its on
+		assertEquals(11, map.getRowPositionsAt(4, 4, Game.OWNER.PLAYER_ONE).size());//12 spots per row, minus the tile its on
 		assertFalse(map.checkTileOccupied(5, 4));
 		
 		assertFalse(map.inBounds(100, -3 ));
 		assertFalse(map.inBounds(100, 100));
 		assertFalse(map.inBounds(0  , -3 ));
 		assertTrue (map.inBounds(3  , 3  ));
+	}
+	
+	/**
+	 * Creates a game, moves the leftmost pawn, and then undoes the move
+	 */
+	@Test
+	public void testUndo(){
+		Game g = new Game();
+		Game.newGame();
+	
+		//Simulate moving PlayerOnes leftmost pawn
+		Game.playerOne.select(0, 1);//Click pawn
+		assertEquals(2, Game.playerOne.pieces.get(0).moves.size());
+		
+		Game.playerOne.select(0, 3);//Two moves forward
+		
+		assertTrue(g.map.checkTileEnemy(0, 3, Game.OWNER.PLAYER_TWO));//Check if player two has an enemy where we moved the pawn
+		
+		Game.undoMove();
+		
+		assertFalse(g.map.checkTileOccupied(0, 3));//Should be gone now
+	}
+	
+	/**
+	 * Creates a game, moves the left pawn, ending the turn. Then creates a new game, making sure the piece is back and turn reset.s
+	 */
+	@Test
+	public void testNewGame(){
+		Game g = new Game();
+		Game.newGame();
+	
+		//Simulate moving PlayerOnes leftmost pawn
+		Game.playerOne.select(0, 1);//Click pawn
+		assertEquals(2, Game.playerOne.pieces.get(0).moves.size());
+		
+		Game.playerOne.select(0, 3);//Two moves forward
+		assertTrue(g.map.checkTileEnemy(0, 3, Game.OWNER.PLAYER_TWO));//Check if player two has an enemy where we moved the pawn
+		
+		Game.newGame();
+		
+		assertFalse(g.map.checkTileEnemy(0, 3, Game.OWNER.PLAYER_TWO));//Check if player two has an enemy where we moved the pawn
+		assertTrue(g.turn == Game.OWNER.PLAYER_ONE);//Player ones turn again since new game
+		
 	}
 
 }
