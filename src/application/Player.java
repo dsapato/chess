@@ -165,7 +165,13 @@ public class Player {
 			for(int i = 0; i < currPiece.moves.size(); i++){
 				Pair move = currPiece.moves.get(i);
 				if(move.x == x && move.y == y){
+					//Record the move
+					Game.moveStack.push(new MoveRecord(playerNumber, new Pair(currPiece.getX(), currPiece.getY()), selectedPieceIndex));
+					
+					//Move the piece
 					currPiece.moveTo(x, y);
+					
+					//Next turn
 					Game.switchTurn();
 					return;
 				}

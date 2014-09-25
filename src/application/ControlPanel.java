@@ -37,7 +37,6 @@ public class ControlPanel {
 			Game.state = Game.STATE.NEW_GAME_PROMPT;
 		}
 		if(undoButton.isClicked()){
-			Game.score.x++;
 			Game.undoMove();
 		}
 		

@@ -1,6 +1,7 @@
 package application;
 
 import java.awt.event.MouseEvent;
+import java.util.Stack;
 
 /**
  * This is the manager of everything, including the Board, Players, and game loop
@@ -70,6 +71,11 @@ public class Game {
 	private static ControlPanel controlPanel;
 	
 	/**
+	 * 
+	 */
+	public static Stack<MoveRecord> moveStack;
+	
+	/**
 	 * The only constructor, creates Map, Players, and sets State
 	 */
 	Game(){
@@ -83,6 +89,7 @@ public class Game {
 		map = new Map();
 		playerOne = new Player(OWNER.PLAYER_ONE);
 		playerTwo = new Player(OWNER.PLAYER_TWO);
+		moveStack = new Stack<MoveRecord>();
 		state = STATE.SELECTING;
 		turn = OWNER.PLAYER_ONE;
 		mouseReleased = false;		
@@ -168,7 +175,10 @@ public class Game {
 	 * Undoes last move made
 	 */
 	public static void undoMove(){
-		switchTurn();
+		if(!moveStack.empty()){
+			MoveRecord lastMove = moveStack.pop();
+			lastMove.undo();	
+		}
 	}
 	
 	public static void switchTurn(){
